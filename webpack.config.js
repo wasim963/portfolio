@@ -18,14 +18,18 @@ module.exports = {
         port: 3000,
         open: true,
         hot: true,
+        liveReload: true,
         compress: true,
         historyApiFallback: true
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'],
     },
     devtool: 'source-map',
     module: {
         rules:[
             {
-                test: /\.?js$/,
+                test: /\.?(js|jsx)$/i,
                 exclude: '/node_modules',
                 use: {
                     loader: 'babel-loader',
@@ -33,21 +37,12 @@ module.exports = {
                         presets: [ '@babel/preset-env', '@babel/preset-react' ]
                     }
                 },
+            },
+            {
+
+                test: /\.css$/i,
+                use: [ 'style-loader', 'css-loader', 'postcss-loader' ],
             }
-            // {
-
-            //     test: '',
-            //     use: [],
-            // },
-            // {
-            //     test: '',
-            //     use: [],
-            // },
-            // {
-
-            //     test: '',
-            //     use: [],
-            // }
         ]
     },
     plugins: [
