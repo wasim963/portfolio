@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { alias } = require('./webpack.config.extra');
 
 module.exports = {
     entry: {
@@ -24,6 +25,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
+
+        // module aliases
+        alias: alias
     },
     devtool: 'source-map',
     module: {
@@ -41,7 +45,7 @@ module.exports = {
             {
 
                 test: /\.css$/i,
-                use: [ 'style-loader', 'css-loader', 'postcss-loader' ],
+                use: [ 'style-loader', 'css-loader', 'sass-loader' ],
             }
         ]
     },

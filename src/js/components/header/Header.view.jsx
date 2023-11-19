@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className='flex justify-between h-16 text-center text-stone-100 bg-emerald-400' >
         <a href='#' className='font-bold text-4xl basis-1/4 py-3 cursor-pointer'>Wasim</a>
@@ -16,5 +16,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header
