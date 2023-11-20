@@ -2,8 +2,7 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer>
-        <div>
+    <footer className='ui-footer' >
             <div className='logo'>Logo</div>
             <div className='learning'>Living, learning, & leveling up one day at a time.</div>
             <div className='social-links'>
@@ -15,7 +14,6 @@ export function Footer() {
                 </ul>
             </div>
             <div className='copyright'>Copyright</div>
-        </div>
     </footer>
   )
 }

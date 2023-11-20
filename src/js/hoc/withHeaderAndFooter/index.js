@@ -1,15 +1,24 @@
 import React,  { Fragment } from 'react';
-import { Header } from 'components/header';
+// import { Header } from 'components/header';
 import { Footer } from 'components/footer';
+import { Header } from 'components/header'
 
-export const withHeaderAndFooter = () => {
-  return (
-    <Fragment>
-        {/* Header View */}
-        <Header />
+export const withHeaderAndFooter = ( Component, config = {} ) => {
 
-        {/* Footer View */}
-        <Footer />
-    </Fragment>
-  )
+  const WithheaderAndFooter = ( props ) => {
+
+    return (
+      <Fragment>
+          {/* Header View */}
+          <Header />
+  
+          <Component { ...props } { ...config }  />
+  
+          {/* Footer View */}
+          <Footer />
+      </Fragment>
+    )
+  }
+
+  return WithheaderAndFooter;
 }
