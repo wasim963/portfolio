@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { alias } = require('./webpack.config.extra');
 
 module.exports = {
-    entry: {
-        bundle: path.join( __dirname, 'src', 'index.js' )
-    },
+    entry: [
+        './src/scss/app.style.scss',
+        path.join( __dirname, 'src', 'index.js' )
+    ],
     output: {
         path: path.resolve( __dirname, 'dist' ),
         filename: '[name][contenthash].js',
@@ -24,7 +26,7 @@ module.exports = {
         historyApiFallback: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.json', 'scss'],
 
         // module aliases
         alias: alias
@@ -44,7 +46,7 @@ module.exports = {
             },
             {
 
-                test: /\.css$/i,
+                test: /\.s?css$/i,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ],
             }
         ]
@@ -53,6 +55,10 @@ module.exports = {
         new HtmlWebpackPlugin( {
             title: 'Portfolio',
             template: path.join( __dirname, 'src', 'index.html' )
+        } ),
+
+        new MiniCSSExtractPlugin( {
+            filename: 'css/style.css'
         } )
     ]
 }
