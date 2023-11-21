@@ -1,3 +1,6 @@
+// import global variables
+@import '~scss-globals';
+
 .ui-header {
     box-sizing: border-box;
     height: 80px;
@@ -10,7 +13,7 @@
     &__logo {
         height: 100%;
         flex: 1;
-        font-size: 24px;
+        font-size: $theme-font-size-14;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -25,7 +28,7 @@
     &__wrapper {
         height: 100%;
         flex: 4;
-        font-size: 18px;
+        font-size: $theme-font-size-8;
         &__navs {
             height: 100%;
             display: flex;
