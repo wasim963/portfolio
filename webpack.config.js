@@ -26,7 +26,7 @@ module.exports = {
         historyApiFallback: true
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', 'scss'],
+        extensions: ['.js', '.jsx', '.json', '.scss'],
 
         // module aliases
         alias: alias

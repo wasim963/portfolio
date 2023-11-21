@@ -3,16 +3,20 @@ import React from 'react';
 export const Header = () => {
   return (
     <header className='ui-header' >
-        <a href='#' className='font-bold text-4xl basis-1/4 py-3 cursor-pointer'>Wasim</a>
-        <nav className='basis-1/4 h-full' >
-            <ul className='flex justify-between text-2xl h-full' >
-                <li className='px-4 cursor-pointer h-full w-full hover:bg-green-600 flex flex-col justify-center' ><span>Home</span></li>
-                <li className='px-4 cursor-pointer h-full w-full hover:bg-green-600 flex flex-col justify-center'><span>About</span></li>
-                <li className='px-4 cursor-pointer h-full w-full hover:bg-green-600 flex flex-col justify-center'><span>Projects</span></li>
-                <li className='px-4 cursor-pointer h-full w-full hover:bg-green-600 flex flex-col justify-center'><span>Contact</span></li>
+        <div className="ui-header__logo">
+          <a href='#' className='ui-header__logo--icon'>Wasim</a>
+        </div>
+        <nav className='ui-header__wrapper' >
+            <ul className='ui-header__wrapper__navs' >
+                <li className='ui-header__wrapper__navs--link'><span>About</span></li>
+                <li className='ui-header__wrapper__navs--link'><span>Portfolio</span></li>
+                <li className='ui-header__wrapper__navs--link'><span>Projects</span></li>
+                <li className='ui-header__wrapper__navs--link'><span>Contact</span></li>
             </ul>
         </nav>
-        <div className='basis-1/4 text-2xl py-3 cursor-pointer' >Theme Btn</div>
+        <div className='ui-header__theme'>
+          <a>Theme</a>
+        </div>
     </header>
   )
 }
