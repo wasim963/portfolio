@@ -1,3 +1,48 @@
 .ui-header {
     box-sizing: border-box;
+    height: 80px;
+    background: black;
+    color: white;
+    padding: 0 15vw;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        height: 100%;
+        flex: 1;
+        font-size: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--icon {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &__wrapper {
+        height: 100%;
+        flex: 4;
+        font-size: 18px;
+        &__navs {
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            &--link {
+                margin: auto 0;
+            }
+        }
+    }
+
+    &__theme {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
 }
