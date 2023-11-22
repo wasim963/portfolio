@@ -1,4 +1,25 @@
+// import global variables
+@import '~scss-globals';
+
 .ui-footer {
     box-sizing: border-box;
-    height: 200px;
+    height: $footer-height;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__message {
+        font-size: $theme-font-size-6;
+    }
+
+    &__info {
+        font-size: $theme-font-size-3;
+
+        &--copyright {
+            margin-left: 6px;
+        }
+    }
 }
