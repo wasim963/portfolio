@@ -1,7 +1,7 @@
 import React from "react";
 import { socialMedia as SocialMediaView  } from "modules/socialMedia";
 
-export function Footer() {
+export function footer() {
   return (
     <footer className="ui-footer">
       <h2 className="ui-footer__message">
@@ -15,3 +15,9 @@ export function Footer() {
     </footer>
   );
 }
+
+// set display name
+footer.displayName = 'footerView';
+
+// set default props
+footer.defaultProps = {};

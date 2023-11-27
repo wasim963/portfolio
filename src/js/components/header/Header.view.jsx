@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = () => {
+export const header = () => {
   return (
     <header className="ui-header">
       <div className="ui-header__logo">
@@ -30,3 +30,9 @@ export const Header = () => {
     </header>
   );
 };
+
+// set display name
+header.displayName = 'headerView';
+
+// set default props
+header.defaultProps = {};
