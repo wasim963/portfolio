@@ -1,5 +1,5 @@
 // import styles
-import './Footer.style';
+import './footer.style';
 
 // export everything from view
-export * from './Footer.view';
+export * from './footer.view';

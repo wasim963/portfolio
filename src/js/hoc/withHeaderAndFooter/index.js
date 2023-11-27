@@ -1,7 +1,7 @@
 import React,  { Fragment } from 'react';
 // import { Header } from 'components/header';
-import { Footer } from 'components/footer';
-import { Header } from 'components/header'
+import { footer as FooterView } from 'components/footer';
+import { header as HeaderView } from 'components/header'
 
 export const withHeaderAndFooter = ( Component, config = {} ) => {
 
@@ -10,12 +10,12 @@ export const withHeaderAndFooter = ( Component, config = {} ) => {
     return (
       <Fragment>
           {/* Header View */}
-          <Header />
+          <HeaderView />
   
           <Component { ...props } { ...config }  />
   
           {/* Footer View */}
-          <Footer />
+          <FooterView />
       </Fragment>
     )
   }

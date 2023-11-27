@@ -1,5 +1,5 @@
 // import styles
-import './Header.style';
+import './header.style';
 
 // export everything from view
-export * from './Header.view';
+export * from './header.view';
