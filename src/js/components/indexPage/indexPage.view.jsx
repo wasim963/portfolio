@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { RouterOutlet } from '../../router';
 
 export const indexPageView = () => {
   return (
-    <div>indexPage.view</div>
+    <div className='ui-index' >
+      <RouterOutlet />
+    </div>
   )
 }
 
