@@ -20,8 +20,9 @@
         align-items: center;
 
         &--icon {
-            color: white;
-            text-decoration: none;
+            a {
+                color: $standard-color-white;
+            }
         }
     }
 
@@ -36,6 +37,10 @@
 
             &--link {
                 margin: auto 0;
+
+                a {
+                    color: $standard-color-white;
+                }
             }
         }
     }
