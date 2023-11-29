@@ -29,13 +29,13 @@
     &__wrapper {
         height: 100%;
         flex: 4;
-        font-size: $theme-font-size-4;
         &__navs {
             height: 100%;
             display: flex;
             justify-content: space-evenly;
 
             &--link {
+                font-size: $theme-font-size-5;
                 margin: auto 0;
 
                 a {

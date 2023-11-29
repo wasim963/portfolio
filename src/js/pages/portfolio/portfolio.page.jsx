@@ -2,7 +2,7 @@ import React from 'react'
 
 export const portfolioPage = () => {
   return (
-    <div>portfolio.paP</div>
+    <h1>Portfolio Page</h1>
   )
 }
 

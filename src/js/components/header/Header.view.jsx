@@ -30,7 +30,7 @@ export const header = () => {
 };
 
 // set display name
-header.displayName = 'headerView';
+header.displayName = 'HeaderView';
 
 // set default props
 header.defaultProps = {};

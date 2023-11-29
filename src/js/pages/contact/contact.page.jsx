@@ -2,7 +2,7 @@ import React from 'react'
 
 export const contactPage = () => {
   return (
-    <div>contact.page</div>
+    <h1>Contact Page</h1>
   )
 }
 

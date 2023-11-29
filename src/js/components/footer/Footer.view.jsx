@@ -17,7 +17,7 @@ export function footer() {
 }
 
 // set display name
-footer.displayName = 'footerView';
+footer.displayName = 'FooterView';
 
 // set default props
 footer.defaultProps = {};

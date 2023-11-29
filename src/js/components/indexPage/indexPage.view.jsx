@@ -3,7 +3,7 @@ import { RouterOutlet } from '../../router';
 
 export const indexPageView = () => {
   return (
-    <div>
+    <div className='ui-index' >
       <RouterOutlet />
     </div>
   )

@@ -1,0 +1,14 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-index {
+    box-sizing: border-box;
+}
+
+.ui-app-view {
+    box-sizing: border-box;
+    max-width: $width-max-content;
+    min-height: $height-min-content;
+    padding: 0 25px;
+    margin: 2.5rem auto;
+}
