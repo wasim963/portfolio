@@ -9,7 +9,7 @@ export const App = () => {
 
   const AppView = withBrowserRouter( IndexPage )
   return (
-    <div className='ui-app'> 
+    <div className='ui-app-view'> 
       <AppView />
     </div>
   )
