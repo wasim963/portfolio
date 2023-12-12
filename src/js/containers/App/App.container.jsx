@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
-import { withHeaderAndFooter } from 'hoc/withHeaderAndFooter';
 import { withBrowserRouter } from 'hoc/withBrowserRouter';
 import { IndexPage } from 'containers/indexPage';
+import { responsiveViewportHook as ResponsiveViewportHook } from 'utils/responsiveViewportHook';
 
 export const App = () => {
-
-  // const WithHeaderAndFooter = withHeaderAndFooter( () => <h2>Body Coponent</h2> )
-
-  const AppView = withBrowserRouter( IndexPage )
+  const AppView = withBrowserRouter( IndexPage );
+  
   return (
-    <div className='ui-app-view'> 
-      <AppView />
-    </div>
+    <Fragment> 
+      <ResponsiveViewportHook>
+        <AppView />
+      </ResponsiveViewportHook>
+    </Fragment>
   )
 }
 

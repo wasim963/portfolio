@@ -9,6 +9,7 @@ exports.alias = {
     'modules': path.resolve( __dirname, 'src/js/modules' ),
     'containers': path.resolve( __dirname, 'src/js/containers' ),
     'pages': path.resolve( __dirname, 'src/js/pages' ),
+    'utils': path.resolve( __dirname, 'src/js/utils' ),
 
     // scss globals
     'scss-globals': path.resolve( __dirname, 'src/scss/globals/index.scss' )
