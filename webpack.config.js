@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { alias } = require('./webpack.config.extra');
+const NodeEnv = process.env.NODE_ENV;
 
 module.exports = {
     entry: [
@@ -10,10 +11,10 @@ module.exports = {
     ],
     output: {
         path: path.resolve( __dirname, 'dist' ),
-        filename: '[name][contenthash].js',
+        filename: 'js/[name][contenthash].js',
         clean: true
     },
-    mode: 'development',
+    mode: NodeEnv,
     devServer: {
         static: {
             directory: path.resolve( __dirname, 'dist')
@@ -47,7 +48,7 @@ module.exports = {
             {
 
                 test: /\.s?css$/i,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ],
+                use: [ NodeEnv === 'production' ?  MiniCSSExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader' ],
             },
             /**
              * Assets - Images, svg, gif etc
