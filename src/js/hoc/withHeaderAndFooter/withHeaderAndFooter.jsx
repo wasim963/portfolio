@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { footer as FooterView } from "components/footer";
-import { header as HeaderView } from "components/header";
+import { footer as FooterView } from "views/footer";
+import { header as HeaderView } from "views/header";
 
 export const withHeaderAndFooter = (Component, config = {}) => {
   const WithHeaderAndFooter = (props) => {

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const portfolioPage = () => {
   return (
-    <h1>Portfolio Page</h1>
+    <div className='ui-portfolio-page'>Portfolio Page</div>
   )
 }
 
