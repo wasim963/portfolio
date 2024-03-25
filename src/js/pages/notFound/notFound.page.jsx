@@ -2,7 +2,7 @@ import React from 'react'
 
 export const notFoundPage = () => {
   return (
-    <h1>Not Found Page</h1>
+    <div className='ui-not-found-page'>Not Found Page</div>
   )
 }
 
