@@ -32,7 +32,7 @@ module.exports = {
         // module aliases
         alias: alias
     },
-    devtool: 'source-map',
+    devtool: (NodeEnv === 'development') ? 'source-map' : false,
     module: {
         rules:[
             {
@@ -70,8 +70,8 @@ module.exports = {
                 test: /\.(jpg|jpeg|png)$/,
                 type: 'asset',
                 parser: {
-                    dataUrlCondition: { // condition which decides an asset is inline type or resorce type
-                        // if asset size <= 3KB then inline else resourec
+                    dataUrlCondition: { // condition which decides an asset is inline type or resource type
+                        // if asset size <= 3KB then inline else resource
                         maxSize: 3 * 1024 // 3 kilobytes
                     }
                 }
@@ -85,7 +85,17 @@ module.exports = {
         } ),
 
         new MiniCSSExtractPlugin( {
-            filename: 'css/style.css'
+            filename: 'css/styles.css'
         } )
-    ]
+    ],
+    performance: {
+        hints: 'warning',
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
+    optimization: {
+        splitChunks: {
+          chunks: 'all'
+        }
+    }
 }
