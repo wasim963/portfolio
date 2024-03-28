@@ -1,4 +1,4 @@
-import { redirect as Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import * as ROUTE_PATHS from 'constants/route-paths';
 
@@ -41,8 +41,8 @@ export const routes = {
     REDIRECT: {
         path: ROUTE_PATHS.REDIRECT,
         exact: false,
-        render( props ) {
-            return <Redirect to={ { pathname: ROUTE_PATHS.HOME } } />
+        render: ( props ) => {
+            return <Navigate to={ ROUTE_PATHS.HOME } replace={true}  />
         }
     }
 }

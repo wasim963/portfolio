@@ -6,7 +6,7 @@ export const routerOutlet = (routes) => {
     return (
       <Routes>
         {Object.entries(routes).map(([routeName, route]) => {
-          if (route.render && typeof route.render === "function") {
+          if (route.render && typeof route.render === 'function') {
             return (
               <Route
                 key={routeName}
