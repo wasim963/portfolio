@@ -5,7 +5,9 @@ const withBrowserRouter = (Component, props = {}) => {
   const WithRouter = () => {
     return (
       <BrowserRouter>
-        <Component {...props} />
+       <React.StrictMode>
+          <Component {...props} />
+       </React.StrictMode>
       </BrowserRouter>
     );
   };

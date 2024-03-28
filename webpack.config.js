@@ -12,7 +12,8 @@ module.exports = {
     output: {
         path: path.resolve( __dirname, 'dist' ),
         filename: 'js/[name][contenthash].js',
-        clean: true
+        clean: true,
+        publicPath: ''
     },
     mode: NodeEnv,
     devServer: {
@@ -24,15 +25,19 @@ module.exports = {
         hot: true,
         liveReload: true,
         compress: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        devMiddleware: {
+            index: 'index.html',
+            writeToDisk: false
+        }
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.scss'],
+        extensions: [ '*','.js', '.jsx', '.json', '.scss'],
 
         // module aliases
         alias: alias
     },
-    devtool: (NodeEnv === 'development') ? 'source-map' : false,
+    devtool: (NodeEnv === 'development') ? 'inline-source-map' : 'source-map',
     module: {
         rules:[
             {
