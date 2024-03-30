@@ -16,7 +16,7 @@ export const header = ( props ) => {
           {
             Array.isArray( navigations ) && navigations.map( navigation => {
               return(
-                <li className="ui-header__wrapper__navs--link">
+                <li key={navigation?.name} className="ui-header__wrapper__navs--link">
                   <Link to={navigation?.path} >{navigation.title}</Link>
                 </li>
               )
