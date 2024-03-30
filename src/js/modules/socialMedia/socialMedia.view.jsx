@@ -10,7 +10,7 @@ export const socialMedia = ( props ) => {
         {
           navigations.map( nav => {
             return(
-              <li className="ui-social-media__links--link" >{nav.title}</li>
+              <li key={nav.name} className="ui-social-media__links--link" >{nav.title}</li>
             )
           } )
         }

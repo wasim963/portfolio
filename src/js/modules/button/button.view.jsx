@@ -1,19 +1,22 @@
 import React from 'react'
 
 export const button = ( props ) => {
+    const { title, primaryClassName, preIcon, postIcon } = props;
+
+    const className = `ui-button ${primaryClassName}`
   return (
     <button
-        className='ui-button'
+        className={className}
         onClick={props.handleClick}
         tabIndex={0}
         disabled={props.disabled}
     >
         {
-            props.preIcon && 'pre'
+            preIcon && 'pre'
         }
-        <span>{ props.title }</span>
+        <span>{ title }</span>
         {
-            props.postIcon && 'post'
+            postIcon && 'post'
         }
     </button>
   )
@@ -23,6 +26,7 @@ button.displayName = 'Button';
 
 button.defaultProps = {
     title: 'Button',
+    primaryClassName: '',
     preIcon: '',
     postIcon: '',
     handleClick: () => {}

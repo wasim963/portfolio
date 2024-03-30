@@ -3,41 +3,7 @@
 
 .ui-home-page {
     box-sizing: border-box;
-    width: 100vw;
-    max-width: 100vw;
+    width: $width-max-content;
+    max-width: $width-max-content;
     display: flex;
-    flex-direction: column;
-    color: $standard-color-white;
-    padding: 2rem;
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &__wrapper {
-            &__image {
-                width: calc(100% - 6rem);
-                border-radius: 5%;
-            }
-        }
-    }
-
-    &__right {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-        &__title {
-            text-align: center;
-            font-size: $theme-font-size-8;
-            // color: $theme-primary-color-1;
-            margin: 10px 0;
-        }
-
-        &__desc {
-            font-size: $theme-font-size-5;
-            letter-spacing: 0.5px;
-            // padding: 8px 20px;
-            width: calc( 100% - 6rem );
-        }
-    }
 }
