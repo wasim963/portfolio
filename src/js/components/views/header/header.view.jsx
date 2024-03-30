@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const header = () => {
+export const header = ( props ) => {
+  const { navigations } = props;
+
   return (
     <header className="ui-header">
       <div className="ui-header__logo">
@@ -11,15 +13,15 @@ export const header = () => {
       </div>
       <nav className="ui-header__wrapper">
         <ul className="ui-header__wrapper__navs">
-          <li className="ui-header__wrapper__navs--link">
-            <Link to={'/about'} >About</Link>
-          </li>
-          <li className="ui-header__wrapper__navs--link">
-            <Link to={'/portfolio'} >Portfolio</Link>
-          </li>
-          <li className="ui-header__wrapper__navs--link">
-            <Link to={'/contact'} >Contact</Link>
-          </li>
+          {
+            Array.isArray( navigations ) && navigations.map( navigation => {
+              return(
+                <li className="ui-header__wrapper__navs--link">
+                  <Link to={navigation?.path} >{navigation.title}</Link>
+                </li>
+              )
+            } )
+          }
         </ul>
       </nav>
       <div className="ui-header__theme">
@@ -33,4 +35,6 @@ export const header = () => {
 header.displayName = 'HeaderView';
 
 // set default props
-header.defaultProps = {};
+header.defaultProps = {
+  navigations: []
+};

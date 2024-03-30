@@ -7,8 +7,7 @@ import { withHeaderAndFooter } from 'hoc/withHeaderAndFooter';
 
 // page components
 import { homePage as HomePage } from "pages/home";
-import { aboutPage as AboutPage } from "pages/about";
-import { portfolioPage as PortfolioPage  } from 'pages/portfolio';
+import { experiencePage as ExperiencePage  } from 'pages/experience';
 import { contactPage as ContactPage } from "pages/contact";
 import { notFoundPage as NotFoundPage } from "pages/notFound";
 
@@ -17,16 +16,11 @@ export const routes = {
         path: ROUTE_PATHS.HOME,
         exact: true,
         component: withHeaderAndFooter( HomePage )
-    }, 
-    ABOUT: {
-        path: ROUTE_PATHS.ABOUT,
-        exact: true,
-        component: withHeaderAndFooter( AboutPage )
     },
-    PORTFOLIO: {
-        path: ROUTE_PATHS.PORTFOLIO,
+    EXPERIENCE: {
+        path: ROUTE_PATHS.EXPERIENCE,
         exact: true,
-        component: withHeaderAndFooter( PortfolioPage )
+        component: withHeaderAndFooter( ExperiencePage )
     },
     CONTACT: {
         path: ROUTE_PATHS.CONTACT,
