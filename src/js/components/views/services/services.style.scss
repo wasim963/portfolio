@@ -1,7 +1,7 @@
 // import global variables
 @import '~scss-globals';
 
-.ui-about {
+.ui-services {
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: $standard-color-black;
@@ -12,8 +12,8 @@
 
     &__header {
         margin-top: 30px;
+        text-align: center;
         &__title {
-            text-align: center;
             font-size: $theme-font-size-10;
         }
     }
