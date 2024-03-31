@@ -2,12 +2,15 @@ import React from "react";
 import photo from '../../../../assets/my-photo.jpeg';
 
 // local views to render
+import { socialMedia as SocialMediaView  } from "modules/socialMedia";
 import { button as Button } from "modules/button";
+
 
 export function AboutView( props ) {
   const { title, description } = props;
+
   return (
-    <about className="ui-about">
+    <div className="ui-about">
       <div className="ui-about__header">
         <h2 className="ui-about__header__title"> { title.toUpperCase() } </h2>
       </div>
@@ -20,6 +23,9 @@ export function AboutView( props ) {
               alt="image"
               height="auto"
             />
+          </div>
+          <div className="ui-about__body__left__social">
+            <SocialMediaView primaryClassName='ui-about__body__left__social__media' />
           </div>
         </div>
         <div className="ui-about__body__right">
@@ -35,7 +41,7 @@ export function AboutView( props ) {
           </div>
         </div>
       </div>
-    </about>
+    </div>
   );
 }
 
