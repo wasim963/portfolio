@@ -1,6 +1,7 @@
 // import global variables
 @import '~scss-globals';
 
-.ui-services {
+.ui-service {
     box-sizing: border-box;
+    min-width: 300px;
 }
