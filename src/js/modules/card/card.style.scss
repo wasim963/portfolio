@@ -1,0 +1,29 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba( 0, 0, 0, 0.05 );
+    background-color: $standard-color-white;
+    gap: 20px;
+
+    &-header {
+        background-color: transparent;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            &__title {
+                font-size: $theme-font-size-8;
+            }
+            &__description {
+                font-size: $theme-font-size-3;
+            }
+        }
+    }
+}
