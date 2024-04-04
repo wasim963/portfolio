@@ -3,6 +3,7 @@ import React from "react";
 // local views to render
 import { AboutView } from "views/about";
 import { ServicesView } from 'views/services';
+import { Icon } from "modules/icon-bank/icon-bank.hoc";
 
 const VIEWS = {
   'about': AboutView,
@@ -14,6 +15,8 @@ export const homePage = ( props ) => {
 
   return (
     <div className="ui-home-page">
+      <Icon id='javascript' width={"96"} height={"96"} />
+      <Icon id='react' width={"96"} height={"96"} />
       {
         widgets.map( widget => {
           const View = VIEWS[ widget?.name ];

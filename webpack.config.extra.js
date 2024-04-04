@@ -11,6 +11,7 @@ exports.alias = {
     'pages': path.resolve( __dirname, 'src/js/pages' ),
     'utils': path.resolve( __dirname, 'src/js/utils' ),
     'data': path.resolve( __dirname, 'data' ),
+    'config': path.resolve( __dirname, 'src/js/config' ),
 
     // scss globals
     'scss-globals': path.resolve( __dirname, 'src/scss/globals/index.scss' )
