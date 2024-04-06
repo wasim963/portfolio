@@ -3,11 +3,12 @@ import React from "react";
 // local views to render
 import { AboutView } from "views/about";
 import { ServicesView } from 'views/services';
-import { Icon } from "modules/icon-bank/icon-bank.hoc";
+import { SkillsView } from "views/skills";
 
 const VIEWS = {
   'about': AboutView,
-  'services': ServicesView
+  'services': ServicesView,
+  'skills': SkillsView
 }
 
 export const homePage = ( props ) => {
@@ -15,8 +16,6 @@ export const homePage = ( props ) => {
 
   return (
     <div className="ui-home-page">
-      <Icon id='javascript' width={"96"} height={"96"} />
-      <Icon id='react' width={"96"} height={"96"} />
       {
         widgets.map( widget => {
           const View = VIEWS[ widget?.name ];
@@ -46,6 +45,10 @@ homePage.defaultProps = {
     {
       name: 'services',
       title: 'Services'
+    },
+    {
+      name: 'skills',
+      title: 'Skills'
     }
   ]
 };
