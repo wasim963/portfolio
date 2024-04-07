@@ -13,6 +13,11 @@
 
         &--link {
             cursor: pointer;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.25);
+            }
         }
     }
 }

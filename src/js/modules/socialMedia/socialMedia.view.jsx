@@ -1,5 +1,8 @@
 import React from "react";
 
+// react views to render
+import { Icon } from "modules/icon-bank/icon-bank.hoc";
+
 export const socialMedia = ( props ) => {
   const {navigations, primaryClassName} = props;
   const className = `ui-social-media ${primaryClassName}`;
@@ -10,7 +13,11 @@ export const socialMedia = ( props ) => {
         {
           navigations.map( nav => {
             return(
-              <li key={nav.name} className="ui-social-media__links--link" >{nav.title}</li>
+              <li key={nav.name} className="ui-social-media__links--link" >
+                <a href={`${nav.path}`} target="_blank" >
+                  <Icon name={nav?.name} width={30} height={30} />
+                </a>
+              </li>
             )
           } )
         }
@@ -26,14 +33,14 @@ socialMedia.displayName = 'SocialMedia';
 socialMedia.defaultProps = {
   navigations: [
     {
-        name: "twitter",
-        title: "Twitter",
-        type: "link",
-        path: ""
-    },
-    {
         name: "linkedin",
         title: "Linkedin",
+        type: "link",
+        path: "https://www.linkedin.com/in/wasim-linked-in"
+    },
+    {
+        name: "twitter",
+        title: "Twitter",
         type: "link",
         path: ""
     },
@@ -41,13 +48,13 @@ socialMedia.defaultProps = {
         name: "instagram",
         title: "Instagram",
         type: "link",
-        path: ""
+        path: "https://www.instagram.com/_unknown_wasim_"
     },
     {
         name: "github",
         title: "Github",
         type: "link",
-        path: ""
+        path: "https://github.com/wasim963"
     }
   ],
   primaryClassName: ''
