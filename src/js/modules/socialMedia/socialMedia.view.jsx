@@ -13,11 +13,9 @@ export const socialMedia = ( props ) => {
         {
           navigations.map( nav => {
             return(
-              <li key={nav.name} className="ui-social-media__links--link" >
-                <a href={`${nav.path}`} target="_blank" >
-                  <Icon name={nav?.name} width={30} height={30} />
-                </a>
-              </li>
+              <a key={nav.name} className="ui-social-media__links--link" href={`${nav.path}`} target="_blank" >
+                <Icon name={nav?.name} width={25} height={25} />
+              </a>
             )
           } )
         }
