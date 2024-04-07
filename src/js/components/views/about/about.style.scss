@@ -3,7 +3,6 @@
 
 .ui-about {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: $standard-color-black;
     display: flex;
     flex-direction: column;
@@ -25,6 +24,11 @@
                     width: calc(100% - 6rem);
                     border-radius: 5%;
                 }
+            }
+
+            &__social {
+                display: flex;
+                justify-content: center;
             }
         }
     

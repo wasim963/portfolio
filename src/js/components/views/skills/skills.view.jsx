@@ -30,8 +30,8 @@ export const SkillsView = ( props ) => {
                 {
                     skills?.map( ( skill, index ) => {
                         return(
-                            <span className="ui-skills__body__skills__skill">
-                                <Icon key={index} name={skill} width={iconWidth} height={iconHeight} />
+                            <span key={index} className="ui-skills__body__skills__skill">
+                                <Icon name={skill} width={iconWidth} height={iconHeight} />
                             </span>
                         )
                     } )
