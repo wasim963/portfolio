@@ -1,5 +1,8 @@
 import React from 'react';
 
+// local dependencies
+import { isMobile, isTablet } from 'utils/responsiveViewportHook/responsiveViewportHook.util';
+
 // local views to render
 import { Card } from "modules/card";
 import { Icon } from "modules/icon-bank/icon-bank.hoc";
@@ -8,7 +11,13 @@ export const SkillsView = ( props ) => {
   const { title, description, primaryClassName, skills } = props;
 
   // main class name
-  const widgetClassName = `ui-skills ${primaryClassName}`
+  const widgetClassName = `ui-skills ${primaryClassName}`;
+
+  // viewport width and height
+  const _isMobile = isMobile();
+  const _isTablet = isTablet();
+  const iconWidth = _isMobile ? 64 : ( _isTablet ? 80 : 96 );
+  const iconHeight = _isMobile ? 64 : ( _isTablet ? 80 : 96 );
 
   return (
     <Card 
@@ -16,17 +25,17 @@ export const SkillsView = ( props ) => {
         title={title}
         description={description}
     >
-        <div className={widgetClassName}>
-            <div className="ui-skills__body">
-                <div className="ui-skills__body__skills">
-                    {
-                        skills?.map( ( skill, index ) => {
-                            return(
-                                <Icon key={index} name={skill} />
-                            )
-                        } )
-                    }
-                </div>
+        <div className="ui-skills__body">
+            <div className="ui-skills__body__skills">
+                {
+                    skills?.map( ( skill, index ) => {
+                        return(
+                            <span className="ui-skills__body__skills__skill">
+                                <Icon key={index} name={skill} width={iconWidth} height={iconHeight} />
+                            </span>
+                        )
+                    } )
+                }
             </div>
         </div>
     </Card>

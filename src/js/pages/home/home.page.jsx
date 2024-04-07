@@ -19,12 +19,10 @@ export const homePage = ( props ) => {
       {
         widgets.map( widget => {
           const View = VIEWS[ widget?.name ];
-          const widgetClassName = `ui-home-page__widget__${widget?.name}`
+          const widgetClassName = `ui-home-page__widget ui-home-page__widget__${widget?.name}`
 
           return(
-            <div key={widget.name} className={'ui-home-page__widget'} >
-              <View primaryClassName={widgetClassName} />
-            </div>
+              <View key={widget.name}  primaryClassName={widgetClassName} />
           )
         } )
       }

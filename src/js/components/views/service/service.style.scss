@@ -4,4 +4,16 @@
 .ui-service {
     box-sizing: border-box;
     min-width: 300px;
+
+    .ui-card-header {
+        &__left {
+            &__title {
+                font-size: $theme-font-size-8;
+            }
+
+            &__description {
+                font-size: $theme-font-size-6;
+            }
+        }
+    }
 }

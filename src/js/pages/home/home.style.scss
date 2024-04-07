@@ -7,9 +7,11 @@
     max-width: $width-max-content;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2rem;
+    padding: 0 4rem;
 
     &__widget {
         padding: 2rem;
+        margin: 15px 0;
     }
 }
