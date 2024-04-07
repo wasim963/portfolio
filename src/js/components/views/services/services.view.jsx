@@ -2,7 +2,7 @@ import React from "react";
 
 // local views to render
 import { ServiceView } from "views/service";
-
+import { Card } from "modules/card";
 
 export function ServicesView( props ) {
   const { title, description, services, primaryClassName } = props;
@@ -10,14 +10,11 @@ export function ServicesView( props ) {
   const widgetClassName = `ui-services ${primaryClassName}`
 
   return (
-    <div className={widgetClassName}>
-      <div className="ui-services__header">
-        <h2 className="ui-services__header__title"> { title.toUpperCase() } </h2>
-        <p 
-          className="ui-services__header__description"
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
-      </div>
+    <Card
+      primaryClassName={widgetClassName}
+      title={title}
+      description={description}
+    >
       <div className="ui-services__body">
         {
           services.map( service => {
@@ -34,7 +31,7 @@ export function ServicesView( props ) {
           } )
         }
       </div>
-    </div>
+    </Card>
   );
 }
 
