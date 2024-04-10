@@ -2,6 +2,7 @@ import React from 'react';
 
 // react view to render
 import { Card } from "modules/card";
+import { experienceView as ExperienceView } from 'views/experience';
 
 export const timeline = ( props ) => {
   const { title, description, primaryClassName, experiences } = props;
@@ -19,7 +20,10 @@ export const timeline = ( props ) => {
                 Array.isArray( experiences ) &&
                 experiences.map( ( exp, index ) => {
                     return(
-                        <h3>Experience</h3>
+                        <ExperienceView
+                          key={index} 
+                          {...exp} 
+                        />
                     )
                 } )
             }
