@@ -1,7 +1,7 @@
 import React from 'react';
 
 // react views to render
-import { experienceWidget as ExperienceWidget } from 'views/experienceWidget';
+import { timeline as timeline } from 'views/timeline';
 
 const underConstruction = () => {
   return(
@@ -10,7 +10,7 @@ const underConstruction = () => {
 }
 
 const VIEWS = {
-  'experienceWidget': ExperienceWidget,
+  'timeline': timeline,
   'educationWidget': underConstruction,
 }
 
@@ -44,7 +44,7 @@ experiencePage.displayName = 'experiencePage';
 experiencePage.defaultProps = {
   widgets: [
     {
-      name: 'experienceWidget',
+      name: 'timeline',
       value: 'education',
       title: 'About'
     },

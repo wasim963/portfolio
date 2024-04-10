@@ -3,21 +3,21 @@ import React from 'react';
 // react view to render
 import { Card } from "modules/card";
 
-export const experienceWidget = ( props ) => {
-    const { title, description, primaryClassName, experienceData } = props;
+export const timeline = ( props ) => {
+  const { title, description, primaryClassName, experiences } = props;
 
   // main class name
-  const widgetClassName = `ui-experience-widget ${primaryClassName}`;
+  const widgetClassName = `ui-timeline ${primaryClassName}`;
   return (
     <Card
         primaryClassName={widgetClassName}
         title={title}
         description={description}
     >
-        <div className="ui-experience-widget__body">
+        <div className="ui-timeline__body">
             {
-                Array.isArray( experienceData ) &&
-                experienceData.map( ( exp, index ) => {
+                Array.isArray( experiences ) &&
+                experiences.map( ( exp, index ) => {
                     return(
                         <h3>Experience</h3>
                     )
@@ -30,14 +30,14 @@ export const experienceWidget = ( props ) => {
 }
 
 // set display name
-experienceWidget.displayName = 'experienceWidget';
+timeline.displayName = 'timeline';
 
 // set default props
-experienceWidget.defaultProps = {
+timeline.defaultProps = {
   title: "Experience",
   description: "A timeline of dedication, learning, and contributions",
   primaryClassName: '',
-  experienceData: [
+  experiences: [
     {
         company: 'Avizva Solutions',
         designation: 'Development Engineer - Front End',
