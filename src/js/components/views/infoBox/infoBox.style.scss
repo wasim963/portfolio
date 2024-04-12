@@ -1,0 +1,9 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-info-box {
+    box-sizing: border-box;
+    width: 350px;
+    height: 200px;
+    border: 1px solid $standard-color-black;
+}
