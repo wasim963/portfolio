@@ -7,7 +7,7 @@ export const Card = ( { tagName, title, description, children, renderActionView,
   return (
     <TagName className={widgetClassName}>
         {
-            (!title || !renderActionView) ?
+            (title || renderActionView) ?
             <div className="ui-card-header">
                 <div className="ui-card-header__left">
                     {

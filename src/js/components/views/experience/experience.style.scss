@@ -1,0 +1,14 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-experience-view {
+    box-sizing: border-box;
+
+    &__body {
+        display: flex;
+
+        &--right {
+            flex-direction: row-reverse;
+        }
+    }
+}

@@ -11,23 +11,26 @@ export const timeline = ( props ) => {
   const widgetClassName = `ui-timeline ${primaryClassName}`;
   return (
     <Card
-        primaryClassName={widgetClassName}
-        title={title}
-        description={description}
+      primaryClassName={widgetClassName}
+      title={title}
+      description={description}
     >
-        <div className="ui-timeline__body">
-            {
-                Array.isArray( experiences ) &&
-                experiences.map( ( exp, index ) => {
-                    return(
-                        <ExperienceView
-                          key={index} 
-                          {...exp} 
-                        />
-                    )
-                } )
-            }
-        </div>
+      <div className="ui-timeline__body">
+        {
+          Array.isArray( experiences ) &&
+          experiences.map( ( exp, index ) => {
+            return(
+                <ExperienceView
+                  key={index} 
+                  {...exp} 
+                  isFirst={index === 0}
+                  isLast={ index === experiences.length - 1 }
+                  side={ index % 2 === 0 ? 'left' : 'right' }
+                />
+            )
+          } )
+        }
+      </div>
     </Card>
    
   )
