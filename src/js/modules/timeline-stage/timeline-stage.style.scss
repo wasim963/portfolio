@@ -3,4 +3,49 @@
 
 .ui-timeline-stage {
     box-sizing: border-box;
+    width: 80px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+
+    &__top, &__bottom {
+        width: 1px;
+        background-color: rgb(57, 57, 48);
+    }
+
+    &__top {
+        align-self: flex-start;
+        height: 100px;
+        transform: translateX(10px);
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        justify-self: flex-start;
+
+        &__line {
+            height: 1px;
+            width: 30px;
+            background-color: rgb(57, 57, 48);
+        }
+
+        &__circle {
+            width: 12px;
+            height: 12px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+    }
+
+    &--right {
+        flex-direction: row-reverse;
+    }
+
+    &__bottom {
+        align-self: flex-end;
+        height: 100px;
+    }
 }
