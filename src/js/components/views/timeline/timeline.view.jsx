@@ -46,10 +46,19 @@ timeline.defaultProps = {
   primaryClassName: '',
   experiences: [
     {
+      company: 'Netflix',
+      designation: 'S0ftware Development Engineer 2',
+      startDate: '2024-06-10',
+      endDate: null,
+      location: 'Banglore',
+      icon: null,
+      roleType: 'Full-Time'
+    },
+    {
         company: 'Avizva Solutions',
         designation: 'Development Engineer - Front End',
         startDate: '2020-00-10',
-        endDate: null,
+        endDate: '2024-06-01',
         location: 'Gurugram',
         icon: null,
         roleType: 'Full-Time'
