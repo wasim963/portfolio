@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import { footer as FooterView } from "views/footer";
-import { header as HeaderView } from "views/header";
+import { footer as FooterView } from "@views/footer";
+import { header as HeaderView } from "@views/header";
 
 // header & footer data
-import { primaryNavigations } from 'data/header';
-import { footerNavigations } from 'data/footer';
+import { primaryNavigations } from '@data/header';
+import { footerNavigations } from '@data/footer';
 
 export const withHeaderAndFooter = (Component, config = {}) => {
   const WithHeaderAndFooter = (props) => {

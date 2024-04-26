@@ -1,8 +1,8 @@
 import React from 'react';
 
 // react view to render
-import { Card } from "modules/card";
-import { experienceView as ExperienceView } from 'views/experience';
+import { Card } from "@modules/card";
+import { experienceView as ExperienceView } from '@views/experience';
 
 export const timeline = ( props ) => {
   const { title, description, primaryClassName, experiences } = props;

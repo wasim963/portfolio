@@ -1,5 +1,5 @@
 import React from "react";
-import { socialMedia as SocialMediaView  } from "modules/socialMedia";
+import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
 
 export function footer( props ) {
   const { navigations } = props;

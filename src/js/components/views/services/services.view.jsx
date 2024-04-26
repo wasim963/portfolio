@@ -1,8 +1,8 @@
 import React from "react";
 
 // local views to render
-import { ServiceView } from "views/service";
-import { Card } from "modules/card";
+import { ServiceView } from "@views/service";
+import { Card } from "@modules/card";
 
 export function ServicesView( props ) {
   const { title, description, services, primaryClassName } = props;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // react views to render
-import { timeline as timeline } from 'views/timeline';
+import { timeline as timeline } from '@views/timeline';
 
 const underConstruction = () => {
   return(

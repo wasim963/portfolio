@@ -2,10 +2,10 @@ import React from 'react';
  
  // local dependencies
  import { iconView } from './icon-bank.view';
- import { iconConfig } from 'config/icon.config';
+ import { iconConfig } from '@config/icon.config';
  
  /**
-  * @desc This is basically an hoc which has 'icon' view as its component, it recieves the config, sends it to 'icon' view along with the props.
+  * @desc This is basically an hoc which has 'icon' view as its component, it receives the config, sends it to 'icon' view along with the props.
   * @param {*} Component - icon view
   * @param {*} config - icon-config containing icon configurations.
   */

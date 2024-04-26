@@ -1,9 +1,9 @@
 import React from 'react';
 
 // local views to render
-import { Card } from "modules/card";
-import { infoBox as InfoBox } from 'views/infoBox';
-import { timelineStage as TimelineStage } from 'modules/timeline-stage';
+import { Card } from "@modules/card";
+import { infoBox as InfoBox } from '@views/infoBox';
+import { timelineStage as TimelineStage } from '@modules/timeline-stage';
 
 export const experienceView = ( props ) => {
 
