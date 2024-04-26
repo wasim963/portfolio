@@ -4,11 +4,31 @@
 .ui-experience-view {
     box-sizing: border-box;
 
+    @media only screen and ( max-width: 767px ) {
+        padding: 2rem 1.2rem;
+    }
+
     &__body {
         display: flex;
+        justify-content: flex-start;
+
+        .ui-timeline-stage  {
+            @media only screen and ( max-width: 767px ) {
+                display: none;
+            }
+        }
 
         &--right {
-            flex-direction: row-reverse;
+            justify-content: flex-end;
+            .ui-info-box {
+                order: 1;
+            }
+        }
+
+        &--last {
+            .ui-timeline-stage  {
+                justify-content: flex-start;
+            }
         }
     }
 }

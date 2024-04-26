@@ -64,6 +64,15 @@ timeline.defaultProps = {
         roleType: 'Full-Time'
     },
     {
+        company: 'HashedIn',
+        designation: 'Software Engineer 2',
+        startDate: '2019-02-01',
+        endDate: '2019-03-30',
+        location: 'Bangluru',
+        icon: null,
+        roleType: 'Permanent'
+    },
+    {
         company: 'Stellar India',
         designation: 'Software Engineer',
         startDate: '2019-02-01',

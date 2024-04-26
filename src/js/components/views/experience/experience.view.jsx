@@ -11,7 +11,7 @@ export const experienceView = ( props ) => {
   const widgetClassName = `ui-experience-view ${props?.primaryClassName}`;
 
   // body class name
-  const bodyClassName = `ui-experience-view__body ui-experience-view__body--${props.side} `
+  const bodyClassName = `ui-experience-view__body ui-experience-view__body--${props.side} ${props?.isLast ? 'ui-experience-view__body--last' : ''} `
 
   return (
     <Card 
