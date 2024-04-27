@@ -4,7 +4,7 @@
 .ui-header {
     box-sizing: border-box;
     height: $header-height;
-    background: black;
+    background: aqua;
     color: white;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
 
         &--icon {
             a {
-                color: $standard-color-white;
+                color: $standard-color-black;
             }
         }
     }
@@ -42,7 +42,7 @@
                 margin: auto 0;
 
                 a {
-                    color: $standard-color-white;
+                    color: $standard-color-black;
                 }
             }
         }
@@ -54,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: $theme-font-size-8;
+        cursor: pointer;
     }
 
     @media only screen and ( max-width: 767px ) {
