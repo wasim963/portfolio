@@ -5,7 +5,7 @@ import { isMobile, isTablet } from '@utils/responsiveViewportHook/responsiveView
 
 // local views to render
 import { Card } from "@modules/card";
-import { Icon } from "@modules/icon-bank/icon-bank.hoc";
+import { Icon } from "@modules/icon-bank";
 
 export const SkillsView = ( props ) => {
   const { title, description, primaryClassName, skills } = props;

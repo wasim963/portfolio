@@ -3,6 +3,51 @@
 
 .ui-sidebar {
     box-sizing: border-box;
+    width: 100vw;
+    height: 50px;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: inherit;
+    border-bottom: 2px solid aqua;
+
+    &__menu {
+        width: 100%;
+        height: 100%;
+        padding: 0 3vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: 50px;
+        overflow: hidden;
+
+        &__item {
+            height: 46px;
+            padding: 12px 3vw;
+            font-size: $theme-font-size-4;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+            a {
+                color: $standard-color-white;
+            }
+        }
+        
+        &--open {
+            height: 200px;
+            transition: height 0.3s ease-out;
+            background-color: rgb(66, 87, 73);
+            padding-top: 10px;
+            max-width: 400px;
+        }
+    }
 
     @media only screen and (min-width: 768px) {
         display: none;

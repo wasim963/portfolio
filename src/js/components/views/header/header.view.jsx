@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// local dependencies
+import { Icon } from '@modules/icon-bank';
+
 export const header = ( props ) => {
-  const { navigations } = props;
+  const { navigations, theme, handleClick } = props;
 
   return (
     <header className="ui-header">
@@ -24,8 +27,13 @@ export const header = ( props ) => {
           }
         </ul>
       </nav>
-      <div className="ui-header__theme">
-        <a>Theme</a>
+      <div onClick={() => handleClick('theme')} className="ui-header__theme">
+        <Icon
+          name={theme === 'light' ? 'sun' : 'moon'}
+          width={32}
+          height={32}
+          fill={theme === 'light' ? '#fff' : '#000'}
+        />
       </div>
     </header>
   );
@@ -36,5 +44,7 @@ header.displayName = 'HeaderView';
 
 // set default props
 header.defaultProps = {
-  navigations: []
+  navigations: [],
+  theme: 'light',
+  handleClick: () => {}
 };
