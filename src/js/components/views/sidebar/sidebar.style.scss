@@ -1,0 +1,12 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-sidebar {
+    box-sizing: border-box;
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
