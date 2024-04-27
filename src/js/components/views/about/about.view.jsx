@@ -2,9 +2,9 @@ import React from "react";
 import photo from '../../../../assets/my-photo.jpeg';
 
 // local views to render
-import { Card } from "modules/card";
-import { socialMedia as SocialMediaView  } from "modules/socialMedia";
-import { button as Button } from "modules/button";
+import { Card } from "@modules/card";
+import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
+import { button as Button } from "@modules/button";
 
 export function AboutView( props ) {
   const { title, description, primaryClassName } = props;

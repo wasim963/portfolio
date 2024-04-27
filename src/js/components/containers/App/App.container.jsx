@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { withBrowserRouter } from 'hoc/withBrowserRouter';
-import { IndexPage } from 'containers/indexPage';
-import { responsiveViewportHook as ResponsiveViewportHook } from 'utils/responsiveViewportHook';
+import { withBrowserRouter } from '@hoc/withBrowserRouter';
+import { IndexPage } from '@containers/indexPage';
+import { responsiveViewportHook as ResponsiveViewportHook } from '@utils/responsiveViewportHook';
 
 export const App = () => {
   const AppView = withBrowserRouter( IndexPage );

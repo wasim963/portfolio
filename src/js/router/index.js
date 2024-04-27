@@ -1,4 +1,4 @@
-import { routerOutlet } from "modules/router-outlet";
+import { routerOutlet } from "@modules/router-outlet";
 
 // router config
 import { routes } from './router.config';

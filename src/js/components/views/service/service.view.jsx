@@ -1,7 +1,7 @@
 import React from "react";
 
 // local views to render
-import { Card } from "modules/card";
+import { Card } from "@modules/card";
 
 export function ServiceView( props ) {
   const { title, description, primaryClassName } = props;

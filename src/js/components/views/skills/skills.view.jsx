@@ -1,11 +1,11 @@
 import React from 'react';
 
 // local dependencies
-import { isMobile, isTablet } from 'utils/responsiveViewportHook/responsiveViewportHook.util';
+import { isMobile, isTablet } from '@utils/responsiveViewportHook/responsiveViewportHook.util';
 
 // local views to render
-import { Card } from "modules/card";
-import { Icon } from "modules/icon-bank/icon-bank.hoc";
+import { Card } from "@modules/card";
+import { Icon } from "@modules/icon-bank/icon-bank.hoc";
 
 export const SkillsView = ( props ) => {
   const { title, description, primaryClassName, skills } = props;

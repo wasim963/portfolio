@@ -1,9 +1,9 @@
 import React from "react";
 
 // local views to render
-import { AboutView } from "views/about";
-import { ServicesView } from 'views/services';
-import { SkillsView } from "views/skills";
+import { AboutView } from "@views/about";
+import { ServicesView } from '@views/services';
+import { SkillsView } from "@views/skills";
 
 const VIEWS = {
   'about': AboutView,

@@ -1,7 +1,7 @@
 import React from "react";
 
 // react views to render
-import { Icon } from "modules/icon-bank/icon-bank.hoc";
+import { Icon } from "@modules/icon-bank/icon-bank.hoc";
 
 export const socialMedia = ( props ) => {
   const {navigations, primaryClassName} = props;

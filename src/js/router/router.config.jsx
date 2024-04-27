@@ -1,15 +1,15 @@
 import { Navigate } from 'react-router-dom';
 
-import * as ROUTE_PATHS from 'constants/route-paths';
+import * as ROUTE_PATHS from '@constants/route-paths';
 
 // hoc's
-import { withHeaderAndFooter } from 'hoc/withHeaderAndFooter';
+import { withHeaderAndFooter } from '@hoc/withHeaderAndFooter';
 
 // page components
-import { homePage as HomePage } from "pages/home";
-import { experiencePage as ExperiencePage  } from 'pages/experience';
-import { contactPage as ContactPage } from "pages/contact";
-import { notFoundPage as NotFoundPage } from "pages/notFound";
+import { homePage as HomePage } from "@pages/home";
+import { experiencePage as ExperiencePage  } from '@pages/experience';
+import { contactPage as ContactPage } from "@pages/contact";
+import { notFoundPage as NotFoundPage } from "@pages/notFound";
 
 export const routes = {
     HOME: {

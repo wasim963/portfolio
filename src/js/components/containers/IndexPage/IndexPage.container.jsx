@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { indexPageView as IndexPageView } from 'views/indexPage';
+import { indexPageView as IndexPageView } from '@views/indexPage';
 
 
 export const IndexPage = () => {
