@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
+import { Header } from "@containers/Header";
 import { footer as FooterView } from "@views/footer";
-import { header as HeaderView } from "@views/header";
 
 // header & footer data
 import { primaryNavigations } from '@data/header';
@@ -11,7 +11,7 @@ export const withHeaderAndFooter = (Component, config = {}) => {
     return (
       <Fragment>
         {/* Header View */}
-        <HeaderView navigations={primaryNavigations} />
+        <Header navigations={primaryNavigations} />
 
         <div className="ui-app-view">
           <Component {...props} {...config} />
