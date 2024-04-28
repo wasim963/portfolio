@@ -4,18 +4,18 @@ import React from 'react';
 import { Card } from "@modules/card";
 import { experienceView as ExperienceView } from '@views/experience';
 
-export const timeline = ( props ) => {
+export const experienceTimeline = ( props ) => {
   const { title, description, primaryClassName, experiences } = props;
 
   // main class name
-  const widgetClassName = `ui-timeline ${primaryClassName}`;
+  const widgetClassName = `ui-experience-timeline ${primaryClassName}`;
   return (
     <Card
       primaryClassName={widgetClassName}
       title={title}
       description={description}
     >
-      <div className="ui-timeline__body">
+      <div className="ui-experience-timeline__body">
         {
           Array.isArray( experiences ) &&
           experiences.map( ( exp, index ) => {
@@ -37,10 +37,10 @@ export const timeline = ( props ) => {
 }
 
 // set display name
-timeline.displayName = 'timeline';
+experienceTimeline.displayName = 'experienceTimeline';
 
 // set default props
-timeline.defaultProps = {
+experienceTimeline.defaultProps = {
   title: "Experience",
   description: "A timeline of dedication, learning, and contributions",
   primaryClassName: '',
@@ -50,7 +50,7 @@ timeline.defaultProps = {
       designation: 'SDE-2',
       startDate: '2024-07-01',
       endDate: null,
-      location: 'Banglore',
+      location: 'Bangluru',
       icon: null,
       roleType: 'Full-Time'
     },

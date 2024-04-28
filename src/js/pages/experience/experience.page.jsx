@@ -1,7 +1,7 @@
 import React from 'react';
 
 // react views to render
-import { timeline as timeline } from '@views/timeline';
+import { experienceTimeline as ExperienceTimeline } from '@views/experience-timeline';
 
 const underConstruction = () => {
   return(
@@ -10,7 +10,7 @@ const underConstruction = () => {
 }
 
 const VIEWS = {
-  'timeline': timeline,
+  'timeline': ExperienceTimeline,
   'educationWidget': underConstruction,
 }
 
