@@ -3,6 +3,8 @@
 
 .ui-experience-view {
     box-sizing: border-box;
+    padding: 0 3rem;
+    box-shadow: none;
 
     @media only screen and ( max-width: 767px ) {
         padding: 2rem 1.2rem;
@@ -11,6 +13,7 @@
     &__body {
         display: flex;
         justify-content: flex-start;
+        align-items: center;
 
         .ui-timeline-stage  {
             @media only screen and ( max-width: 767px ) {

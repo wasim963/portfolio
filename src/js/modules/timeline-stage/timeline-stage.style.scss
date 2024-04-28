@@ -4,7 +4,7 @@
 .ui-timeline-stage {
     box-sizing: border-box;
     width: 84px;
-    height: 200px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
 
     &__top, &__bottom {
         width: 1px;
-        height: 100px;
+        height: 110px;
         background-color: rgb(57, 57, 48);
     }
 

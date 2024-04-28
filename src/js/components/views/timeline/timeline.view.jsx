@@ -46,9 +46,9 @@ timeline.defaultProps = {
   primaryClassName: '',
   experiences: [
     {
-      company: 'Netflix',
-      designation: 'S0ftware Development Engineer 2',
-      startDate: '2024-06-10',
+      company: 'HashedIn',
+      designation: 'SDE-2',
+      startDate: '2024-07-01',
       endDate: null,
       location: 'Banglore',
       icon: null,
@@ -57,24 +57,15 @@ timeline.defaultProps = {
     {
         company: 'Avizva Solutions',
         designation: 'Development Engineer - Front End',
-        startDate: '2020-00-10',
-        endDate: '2024-06-01',
+        startDate: '2020-08-10',
+        endDate: '2024-06-30',
         location: 'Gurugram',
         icon: null,
         roleType: 'Full-Time'
     },
     {
-        company: 'HashedIn',
-        designation: 'Software Engineer 2',
-        startDate: '2019-02-01',
-        endDate: '2019-03-30',
-        location: 'Bangluru',
-        icon: null,
-        roleType: 'Permanent'
-    },
-    {
         company: 'Stellar India',
-        designation: 'Software Engineer',
+        designation: 'Web Developer Intern',
         startDate: '2019-02-01',
         endDate: '2019-03-30',
         location: 'New Delhi',
