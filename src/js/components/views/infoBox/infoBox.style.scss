@@ -4,14 +4,70 @@
 .ui-info-box {
     box-sizing: border-box;
     flex-basis: 45%;
-    height: 200px;
+    height: 180px;
     border: 1px solid $standard-color-black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+    color: $standard-color-black;
+
+    &__header {
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        gap: 8px;
+        color: #3a3838;
+        font-size: $theme-font-size-3;
+        line-height: 1.5;
+
+        &__period, &__role {
+            border: 1px solid black;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        align-self: center;
+        display: flex;
+        gap: 10px;
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            letter-spacing: 0.1rem;
+            gap: 1rem;
+
+            h3 {
+                font-size: $theme-font-size-8;
+                font-weight: 600;
+                line-height: 3rem;
+            }
+            h4 {
+                font-size: $theme-font-size-8;
+                font-weight: 400;
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: $theme-font-size-5;
+                color: #444445;
+                opacity: .5;
+                line-height: 1.5rem;
+            }
+        }
+    }
 
     @media only screen and (max-width: 900px) {
-        flex-basis: 44.5%;
+        flex-basis: 44.7%;
     }
     @media only screen and (max-width: 860px) {
-        flex-basis: 43.5%;
+        flex-basis: 44.25%;
     }
 
     @media only screen and ( max-width: 767px ) {
