@@ -2,6 +2,7 @@ import React from 'react';
 
 // react views to render
 import { experienceTimeline as ExperienceTimeline } from '@views/experience-timeline';
+import { educationTimeline as EducationTimeline } from '@views/education-timeline';
 
 const underConstruction = () => {
   return(
@@ -11,7 +12,7 @@ const underConstruction = () => {
 
 const VIEWS = {
   'timeline': ExperienceTimeline,
-  'educationWidget': underConstruction,
+  'educationWidget': EducationTimeline,
 }
 
 

@@ -40,7 +40,7 @@
             display: flex;
             flex-direction: column;
             text-align: left;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.075rem;
             gap: 1rem;
 
             h3 {
@@ -53,6 +53,7 @@
                 font-weight: 400;
                 line-height: 1.5rem;
                 margin-bottom: 1rem;
+                letter-spacing: 0.05rem;
             }
             p {
                 font-size: $theme-font-size-5;

@@ -4,8 +4,8 @@
 .ui-footer {
     box-sizing: border-box;
     height: $footer-height;
-    background-color: black;
-    color: white;
+    background-color: aqua;
+    color: $standard-color-black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +13,7 @@
     border-top: 0.5px solid $standard-color-white;
     max-width: 100vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.05rem;
 
     &__message {
         font-size: $theme-font-size-7;
