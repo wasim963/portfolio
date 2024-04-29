@@ -1,11 +1,21 @@
 // import global variables
 @import '~scss-globals';
 
+$bg-image: url('../../../../assets/web-design.jpg');
+
 .ui-service {
     box-sizing: border-box;
     min-width: 300px;
+    box-shadow: none;
+    border: 1px solid aqua;
+    display: flex;
+    flex-direction: column;
 
     .ui-card-header {
+        order: 2;
+        text-align: left;
+        letter-spacing: 0.05rem;
+
         &__left {
             &__title {
                 font-size: $theme-font-size-8;
@@ -13,7 +23,18 @@
 
             &__description {
                 font-size: $theme-font-size-6;
+                color: #585656;
             }
+        }
+    }
+
+    &__body {
+        order: 1;
+
+        img {
+            height: 200px;
+            width: 100%;
+            border-radius: 10px;
         }
     }
 }

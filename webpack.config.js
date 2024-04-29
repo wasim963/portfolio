@@ -60,19 +60,19 @@ module.exports = {
              */
             {
                 // Asset Type - resource - for large files like images
-                test: /\.(jpg|png|jpeg)$/,
+                test: /\.(jpg|png|jpeg|webp)$/,
                 type: 'asset/resource'
             },
             {   
                 // Asset Type - Inline - For small files data-uri like svg images 
                 // browser doesn't need to make http request fetch asset
-                test: /\.(jpg|png|jpeg)$/,
+                test: /\.(jpg|png|jpeg|webp)$/,
                 type: 'asset/inline'
             },
             {
                 // General Asset Type - if asset is less than or equal to 8KB then it is inline type
                 // else it is resource type by default 
-                test: /\.(jpg|jpeg|png)$/,
+                test: /\.(jpg|jpeg|png|webp)$/,
                 type: 'asset',
                 parser: {
                     dataUrlCondition: { // condition which decides an asset is inline type or resource type

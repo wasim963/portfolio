@@ -7,7 +7,7 @@ import { Card } from "@modules/card";
 export function ServicesView( props ) {
   const { title, description, services, primaryClassName } = props;
 
-  const widgetClassName = `ui-services ${primaryClassName}`
+  const widgetClassName = `ui-services ${primaryClassName}`;
 
   return (
     <Card
@@ -48,7 +48,7 @@ ServicesView.defaultProps = {
       title: 'Responsive Web Design',
       description: 'Transform your website into a dynamic and adaptable platform that seamlessly caters to desktops, tablets, and smartphones, ensuring your business stays ahead in the digital era.',
       config: {
-        icon: 'webDesign'
+        image: 'responsive-web.webp'
       }
     },
     {
@@ -56,7 +56,7 @@ ServicesView.defaultProps = {
       title: 'Development',
       description: 'Building a robust digital solution from intuitive interfaces to seamless functionality, that streamlines processes, enhances productivity, and drives your business forward.',
       config: {
-        icon: 'development'
+        image: 'development.png'
       }
     },
     {
@@ -64,7 +64,7 @@ ServicesView.defaultProps = {
       title: 'UI/UX',
       description: 'Crafting visually stunning interfaces and intuitive user journeys that not only captivate your audience but also drive engagement and conversions.',
       config: {
-        icon: 'ui-ux'
+        image: 'web-design.jpg'
       }
     }
   ],
