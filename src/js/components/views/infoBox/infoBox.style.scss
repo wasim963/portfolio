@@ -3,8 +3,8 @@
 
 .ui-info-box {
     box-sizing: border-box;
-    flex-basis: 45%;
-    height: 190px;
+    flex-basis: calc(50% - 42px);;
+    min-height: 190px;
     border: 1px solid $standard-color-black;
     display: flex;
     flex-direction: column;
@@ -40,6 +40,10 @@
             img {
                 width: 90px;
                 height: auto;
+
+                @media only screen and ( max-width: 866px ) {
+                    width: 70px;
+                }
             }
         }
 
@@ -54,35 +58,33 @@
                 font-size: $theme-font-size-8;
                 font-weight: 600;
                 line-height: 3rem;
+
+                @media only screen and ( max-width: 866px ) {
+                    font-size: $theme-font-size-7;
+                }
             }
             h4 {
                 font-size: $theme-font-size-7;
                 font-weight: 400;
                 line-height: 2.5rem;
-                margin-bottom: 0.5rem;
+                margin-bottom: 1rem;
                 letter-spacing: 0.05rem;
+
+                @media only screen and ( max-width: 866px ) {
+                    font-size: $theme-font-size-7;
+                }
             }
             p {
                 font-size: $theme-font-size-5;
                 color: #444445;
                 opacity: .5;
                 line-height: 1.5rem;
+                
+                @media only screen and ( max-width: 866px ) {
+                    font-size: $theme-font-size-4;
+                }
             }
         }
-    }
-
-    @media only screen and (max-width: 950px) {
-        flex-basis: 44.8%;
-    }
-
-    @media only screen and (max-width: 900px) {
-        flex-basis: 44.7%;
-    }
-    @media only screen and (max-width: 860px) {
-        flex-basis: 44.20%;
-    }
-    @media only screen and (max-width: 780px) {
-        flex-basis: 43.7%;
     }
 
     @media only screen and ( max-width: 767px ) {

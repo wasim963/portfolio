@@ -325,5 +325,52 @@ export const iconConfig = {
             height: 96,
             fill: '#000'
         }
+    },
+    download: {
+        markup: `
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" __width__ __height__ viewBox="0 0 24.000000 24.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M100 175 c0 -40 -3 -45 -22 -45 -21 0 -21 -2 10 -32 l32 -33 32 33
+            c31 30 31 32 10 32 -19 0 -22 5 -22 45 0 38 -3 45 -20 45 -17 0 -20 -7 -20
+            -45z"/>
+            <path d="M20 30 c0 -6 40 -10 100 -10 60 0 100 4 100 10 0 6 -40 10 -100 10
+            -60 0 -100 -4 -100 -10z"/>
+            </g>
+        </svg>
+        `,
+        defaultStyles: {
+            width: 96,
+            height: 96,
+            fill: '#000'
+        }
+    },
+    backIcon: {
+        markup: `
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" __width__ __height__ viewBox="0 0 50.000000 50.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M235 360 l-110 -110 112 -112 c90 -89 115 -110 125 -100 10 10 -8 33
+            -87 112 l-100 100 99 99 c86 86 108 121 78 121 -4 0 -57 -50 -117 -110z"/>
+            </g>
+        </svg>
+        `,
+        defaultStyles: {
+            width: 96,
+            height: 96,
+            fill: '#000'
+        }
+    },
+    close: {
+        markup: `
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" __width__ __height__>
+                <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/>
+            </svg>
+        `,
+        defaultStyles: {
+            width: 96,
+            height: 96,
+            fill: '#000'
+        }
     }
 }

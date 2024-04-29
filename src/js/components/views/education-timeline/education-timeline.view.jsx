@@ -59,7 +59,7 @@ educationTimeline.defaultProps = {
         designation: 'Intermediate Of Science',
         startDate: '2013-04-01',
         endDate: '2015-04-30',
-        location: 'Kishanganj',
+        location: 'Kishanganj, Bihar',
         icon: 'jnvst.png',
         roleType: 'Full-Time'
     },
@@ -68,7 +68,7 @@ educationTimeline.defaultProps = {
         designation: 'Matriculation',
         startDate: '2011-04-01',
         endDate: '2013-04-30',
-        location: 'Kishanganj',
+        location: 'Kishanganj, Bihar',
         icon: 'jnvst.png',
         roleType: 'Full-Time'
     }
