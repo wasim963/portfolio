@@ -3,5 +3,15 @@
 
 .ui-contact-page {
     box-sizing: border-box;
-    color: $theme-primary-color-1;
+    width: $width-max-content;
+    max-width: $width-max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    padding: 0 4rem;
+
+    &__widget {
+        padding: 2rem;
+        margin: 15px 0;
+    }
 }

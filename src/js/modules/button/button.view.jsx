@@ -10,6 +10,7 @@ export const button = ( props ) => {
     return (
         <button
             className={widgetClassName}
+            type={props?.type}
             onClick={props.handleClick}
             onKeyDown={props?.handleClick}
             tabIndex={0}
@@ -32,6 +33,7 @@ button.displayName = 'Button';
 
 button.defaultProps = {
     title: 'Button',
+    type: 'button',
     primaryClassName: '',
     preIcon: '',
     postIcon: '',
