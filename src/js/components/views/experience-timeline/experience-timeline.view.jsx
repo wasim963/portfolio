@@ -46,12 +46,12 @@ experienceTimeline.defaultProps = {
   primaryClassName: '',
   experiences: [
     {
-      company: 'HashedIn',
+      company: 'HashedIn By Deloitte',
       designation: 'SDE-2',
       startDate: '2024-07-01',
       endDate: null,
       location: 'Bangluru',
-      icon: null,
+      icon: 'hashedin.webp',
       roleType: 'Full-Time'
     },
     {
@@ -60,7 +60,7 @@ experienceTimeline.defaultProps = {
         startDate: '2020-08-10',
         endDate: '2024-06-30',
         location: 'Gurugram',
-        icon: null,
+        icon: 'avizva.jpeg',
         roleType: 'Full-Time'
     },
     {
@@ -69,7 +69,7 @@ experienceTimeline.defaultProps = {
         startDate: '2019-02-01',
         endDate: '2019-03-30',
         location: 'New Delhi',
-        icon: null,
+        icon: 'stellarIndia.jpg',
         roleType: 'Freelance'
     }
   ]

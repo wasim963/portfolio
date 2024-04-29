@@ -1,4 +1,6 @@
 import React from "react";
+
+// local dependencies
 import useImage from '@hooks/useImage';
 
 // local views to render

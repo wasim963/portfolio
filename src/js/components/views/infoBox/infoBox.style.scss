@@ -4,7 +4,7 @@
 .ui-info-box {
     box-sizing: border-box;
     flex-basis: 45%;
-    height: 180px;
+    height: 190px;
     border: 1px solid $standard-color-black;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
         line-height: 1.5;
 
         &__period, &__role {
-            border: 1px solid black;
+            border: 1px solid $standard-color-black;
             padding: 0.25rem 0.5rem;
             border-radius: 9999px;
         }
@@ -35,6 +35,13 @@
         align-self: center;
         display: flex;
         gap: 10px;
+
+        &__icon {
+            img {
+                width: 90px;
+                height: auto;
+            }
+        }
 
         &__details {
             display: flex;
@@ -49,10 +56,10 @@
                 line-height: 3rem;
             }
             h4 {
-                font-size: $theme-font-size-8;
+                font-size: $theme-font-size-7;
                 font-weight: 400;
-                line-height: 1.5rem;
-                margin-bottom: 1rem;
+                line-height: 2.5rem;
+                margin-bottom: 0.5rem;
                 letter-spacing: 0.05rem;
             }
             p {
@@ -64,11 +71,18 @@
         }
     }
 
+    @media only screen and (max-width: 950px) {
+        flex-basis: 44.8%;
+    }
+
     @media only screen and (max-width: 900px) {
         flex-basis: 44.7%;
     }
     @media only screen and (max-width: 860px) {
-        flex-basis: 44.25%;
+        flex-basis: 44.20%;
+    }
+    @media only screen and (max-width: 780px) {
+        flex-basis: 43.7%;
     }
 
     @media only screen and ( max-width: 767px ) {

@@ -51,7 +51,7 @@ educationTimeline.defaultProps = {
       startDate: '2016-07-01',
       endDate: '2020-07-30',
       location: 'New Delhi',
-      icon: null,
+      icon: 'jamia.png',
       roleType: 'Full-Time'
     },
     {
@@ -60,7 +60,7 @@ educationTimeline.defaultProps = {
         startDate: '2013-04-01',
         endDate: '2015-04-30',
         location: 'Kishanganj',
-        icon: null,
+        icon: 'jnvst.png',
         roleType: 'Full-Time'
     },
     {
@@ -69,7 +69,7 @@ educationTimeline.defaultProps = {
         startDate: '2011-04-01',
         endDate: '2013-04-30',
         location: 'Kishanganj',
-        icon: null,
+        icon: 'jnvst.png',
         roleType: 'Full-Time'
     }
   ]
