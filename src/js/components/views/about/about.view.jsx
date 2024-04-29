@@ -39,6 +39,7 @@ export function AboutView( props ) {
             <Button 
               primaryClassName={'ui-about__body__right__actions__action'}
               title={'Download Resume'} 
+              preIcon={'download'}
             />
           </div>
         </div>
