@@ -6,12 +6,19 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: $standard-color-black;    
+    color: rgba(4, 20, 41, 0.57);    
     background-color: aqua;
     border: 1px solid aqua;
     border-radius: 6px;
-    height: 32px;
-    padding: 10px;
+    padding: 8px 12px;
     cursor: pointer;
 
+    &__preIcon {
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    &__title {
+        font-size: $theme-font-size-4;
+    }
 }

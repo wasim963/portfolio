@@ -21,7 +21,7 @@ export const ContactForm = ( props ) => {
         title={title}
         description={description}
         >
-            <div className="ui-about__body">
+            <div className="ui-contact-form__body">
                 <Formik
                     initialValues={formFields.reduce((acc, field) => {
                         acc[field.name] = '';
@@ -35,7 +35,7 @@ export const ContactForm = ( props ) => {
                         }, 400);
                     }}
                 >
-                    <Form>
+                    <Form className='ui-contact-form__body__form' >
                         {/* render form fields */}
                         {
                             formFields.map(field => {
@@ -82,12 +82,12 @@ ContactForm.defaultProps = {
         validations: [
             {
                 name: 'required',
-                message: 'Please enter name!'
+                message: 'Please enter name'
             },
             {
                 name: 'max',
                 value: 20,
-                message: 'Must be 20 characters or less'
+                message: 'Name must be 20 characters or less'
             }
         ]
     },
@@ -99,23 +99,25 @@ ContactForm.defaultProps = {
         validations: [
             {
                 name: 'required',
-                message: 'Please enter email!'
+                message: 'Please enter email'
             },
             {
                 name: 'email',
-                message: 'Invalid email address'
+                message: 'Please enter valid email address'
             }
         ]
     },
     {
-        name: 'note',
+        name: 'message',
         type: 'textarea',
-        title: 'Note',
-        placeholder: 'Type here...',
+        title: 'Message',
+        placeholder: 'Enter your message...',
+        rows: 5,
         validations: [
             {
-                name: 'required',
-                message: 'Please enter note!'
+                name: 'max',
+                value: 250,
+                message: 'Message must be 250 characters or less'
             }
         ]
     }
