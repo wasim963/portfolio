@@ -9,13 +9,14 @@ export const InputField = ({ title, primaryClassName, validations, ...props }) =
   const [field, meta] = useField(props);
 
   const fieldClassName = `ui-input-field ${primaryClassName}`;
+  const inputClassName = `ui-input-field__input ${meta.touched && meta.error ? 'ui-input-field__input__error' : ''} `;
   
    return (
      <div className={fieldClassName}>
        <label className='ui-input-field__label' htmlFor={props.id || props.name}>{title}</label>
-       <input className="ui-input-field__input" id={props.id || props.name} {...field} {...props} />
+       <input className={inputClassName} id={props.id || props.name} {...field} {...props} />
        {meta.touched && meta.error ? (
-         <div className="error">{meta.error}</div>
+         <div className="ui-input-field__error">{meta.error}</div>
        ) : null}
      </div>
    );

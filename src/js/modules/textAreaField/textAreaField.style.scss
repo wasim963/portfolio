@@ -1,6 +1,37 @@
 // import global variables
 @import '~scss-globals';
 
-.ui-input-field {
+.ui-text-area-field {
     box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+    width: 100%;
+    font-size: $theme-font-size-4;
+    margin: 2rem 0;
+    
+
+    &__label {
+        margin-bottom: 0.5rem;
+    }
+
+    &__input {
+        padding: 11px;
+        
+        &__error {
+            outline: none;
+            border: 1px solid red;
+
+            &:focus {
+                border: 1px solid red;
+            }
+        }
+    }
+
+    &__error {
+        color: red;
+        font-size: $theme-font-size-3;
+    }
 }

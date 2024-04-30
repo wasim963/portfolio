@@ -3,4 +3,17 @@
 
 .ui-contact-form {
     box-sizing: border-box;
+    width: 100%;
+
+    &__body {
+        &__form {
+            display: flex;
+            flex-direction: column;
+
+            .ui-button {
+                align-self: flex-end;
+                padding: 12px 20px;
+            }
+        }
+    }
 }

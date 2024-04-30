@@ -17,13 +17,17 @@ export const button = ( props ) => {
             disabled={props.disabled}
         >
             {
-                    preIcon &&
+                preIcon &&
+                <span className='ui-button__preIcon' >
                     <Icon name={props.preIcon} width = {18} height={18} />
+                </span>
             }
-            <span>{ title }</span>
+            <span className='ui-button__title' >{ title }</span>
             {
-                    postIcon &&
-                    <Icon name={props.postIcon} width = {18} height={18} />
+                postIcon &&
+                <span className='ui-button__postIcon' >
+                    <Icon name={props.postIcon} width={18} height={18} />
+                </span>
             }
         </button>
     )
