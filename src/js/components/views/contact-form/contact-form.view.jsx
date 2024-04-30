@@ -1,21 +1,19 @@
 import React from 'react';
- import { Formik } from 'formik';
-import * as Yup from 'yup';
-import { button as Button } from "@modules/button";
-
+import { Formik, Form } from 'formik';
 
 // local dependencies
-// import { isMobile, isTablet } from '@utils/responsiveViewportHook/responsiveViewportHook.util';
+import { formFieldResolver } from '@resolvers/formField';
+import { validationSchemaResolver } from '@resolvers/validationSchema';
 
-// local views to render
+// react component views to render
 import { Card } from "@modules/card";
-// import { Icon } from "@modules/icon-bank";
+import { button as Button } from "@modules/button";
 
 export const ContactForm = ( props ) => {
-  const { title, description, primaryClassName } = props;
+  const { title, description, primaryClassName, formFields=[], formActions=[] } = props;
 
-  // main class name
-  const widgetClassName = `ui-contact-form ${primaryClassName}`;
+    // main class name
+    const widgetClassName = `ui-contact-form ${primaryClassName}`;
 
     return (
       <Card
@@ -25,16 +23,11 @@ export const ContactForm = ( props ) => {
         >
             <div className="ui-about__body">
                 <Formik
-                    initialValues={{ firstName: '', lastName: '', email: '' }}
-                    validationSchema={Yup.object({
-                        firstName: Yup.string()
-                        .max(15, 'Must be 15 characters or less')
-                        .required('Please enter first  name!'),
-                        lastName: Yup.string()
-                        .max(20, 'Must be 20 characters or less')
-                        .required('Please enter last name!'),
-                        email: Yup.string().email('Invalid email address').required('Please enter email!'),
-                    })}
+                    initialValues={formFields.reduce((acc, field) => {
+                        acc[field.name] = '';
+                        return acc;
+                    }, {} )}
+                    validationSchema={() => validationSchemaResolver(formFields)}
                     onSubmit={(values, { setSubmitting }) => {
                         setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));
@@ -42,37 +35,30 @@ export const ContactForm = ( props ) => {
                         }, 400);
                     }}
                 >
-                    {formik => (
-                        <form onSubmit={formik.handleSubmit}>
-                            <label htmlFor="firstName">First Name</label>
-                            <input
-                                id="firstName"
-                                type="text"
-                                {...formik.getFieldProps('firstName')}
-                            />
-                            {formik.touched.firstName && formik.errors.firstName ? (
-                                <div>{formik.errors.firstName}</div>
-                            ) : null}
+                    <Form>
+                        {/* render form fields */}
+                        {
+                            formFields.map(field => {
+                                const FieldView = formFieldResolver(field?.type);
+                                
+                                return (
+                                    <FieldView key={field?.name} { ...field } />
+                                )
+                            } )
+                        }
 
-                            <label htmlFor="lastName">Last Name</label>
-                            <input
-                                id="lastName"
-                                type="text"
-                                {...formik.getFieldProps('lastName')}
-                            />
-                            {formik.touched.lastName && formik.errors.lastName ? (
-                                <div>{formik.errors.lastName}</div>
-                            ) : null}
-
-                            <label htmlFor="email">Email Address</label>
-                            <input id="email" type="email" {...formik.getFieldProps('email')} />
-                            {formik.touched.email && formik.errors.email ? (
-                                <div>{formik.errors.email}</div>
-                            ) : null}
-
-                            <Button type={"submit"} title={'Submit'} />
-                        </form>
-                    )}
+                        {/* render form actions */}
+                        {
+                            formActions.map(action => {
+                                return (
+                                    <Button
+                                        key={action?.name}
+                                        { ...action }
+                                    />
+                                )
+                            } )
+                        }
+                    </Form>
                 </Formik>
             </div>
         </Card>
@@ -86,5 +72,59 @@ ContactForm.displayName = 'ContactForm';
 ContactForm.defaultProps = {
   title: "CONTACT",
   description: "Have a question or want to work together?",
-  primaryClassName: ''
+  primaryClassName: '',
+  formFields: [
+    {
+        name: 'name',
+        type: 'text',
+        title: 'Name',
+        placeholder: 'Enter name',
+        validations: [
+            {
+                name: 'required',
+                message: 'Please enter name!'
+            },
+            {
+                name: 'max',
+                value: 20,
+                message: 'Must be 20 characters or less'
+            }
+        ]
+    },
+    {
+        name: 'email',
+        type: 'email',
+        title: 'Email',
+        placeholder: 'Enter email',
+        validations: [
+            {
+                name: 'required',
+                message: 'Please enter email!'
+            },
+            {
+                name: 'email',
+                message: 'Invalid email address'
+            }
+        ]
+    },
+    {
+        name: 'note',
+        type: 'textarea',
+        title: 'Note',
+        placeholder: 'Type here...',
+        validations: [
+            {
+                name: 'required',
+                message: 'Please enter note!'
+            }
+        ]
+    }
+  ],
+  formActions: [
+      {
+          name: 'submit',
+          type: 'submit',
+          title: 'Submit'
+      }
+  ]
 };
