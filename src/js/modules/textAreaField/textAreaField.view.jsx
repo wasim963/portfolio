@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
  
-export const TextAreaField = ({ title, ...props }) => {
+export const TextAreaField = ({ title, validations, ...props }) => {
    
    // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
    // which we can spread on <input>. We can use field meta to show an error

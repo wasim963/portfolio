@@ -1,4 +1,4 @@
-import { FIELD_TYPE } from 'constants/common';
+import { FIELD_TYPE } from '@constants/common';
 
 import { InputField } from "@modules/inputField";
 import { SingleSelectField } from "@modules/singleSelectField";
