@@ -13,7 +13,7 @@ exports.alias = {
     '@data': path.resolve( __dirname, 'data' ),
     '@config': path.resolve(__dirname, 'src/js/config'),
     '@hooks': path.resolve(__dirname, 'src/js/hooks'),
-    
+    '@resolvers': path.resolve(__dirname, 'src/js/resolvers'),
 
     // scss globals
     'scss-globals': path.resolve( __dirname, 'src/scss/globals/index.scss' )
