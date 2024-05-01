@@ -1,6 +1,9 @@
 import React from "react";
 import photo from '../../../../assets/my-photo.jpeg';
 
+// local dependencies
+import useImage from "@hooks/useImage";
+
 // local views to render
 import { Card } from "@modules/card";
 import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
@@ -8,8 +11,21 @@ import { button as Button } from "@modules/button";
 
 export function AboutView( props ) {
   const { title, description, primaryClassName } = props;
+  const { loading, error, image } = useImage('Res_01May24.pdf');
 
-  const widgetClassName = `ui-about ${primaryClassName}`
+  const widgetClassName = `ui-about ${primaryClassName}`;
+
+  const handleDownloadResume = () => {
+    // anchor link
+    const element = document.createElement("a");
+    element.href = image;
+    element.download = "Wasim-resume-" + Date.now() + ".pdf";
+    // element.target='__blank'
+
+    // simulate link click
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  }
   return (
     <Card
       primaryClassName={widgetClassName}
@@ -40,6 +56,7 @@ export function AboutView( props ) {
               primaryClassName={'ui-about__body__right__actions__action'}
               title={'Download Resume'} 
               preIcon={'download'}
+              handleClick={handleDownloadResume}
             />
           </div>
         </div>
