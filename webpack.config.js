@@ -80,6 +80,17 @@ module.exports = {
                         maxSize: 3 * 1024 // 3 kilobytes
                     }
                 }
+            },
+            {
+                test: /\.(gif|pdf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                        name: '[name].[ext]'
+                        }
+                    }
+                ]
             }
         ]
     },
