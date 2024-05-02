@@ -4,7 +4,7 @@ import React from 'react';
 import { ContactForm } from "@views/contact-form";
 
 const VIEWS = {
-  'contact-form': ContactForm
+  'contactForm': ContactForm
 }
 
 export const contactPage = (props) => {
@@ -33,8 +33,8 @@ contactPage.displayName = 'contactPage';
 contactPage.defaultProps = {
   widgets: [
     {
-      name: 'contact-form',
-      title: 'Contact-Form'
+      name: 'contactForm',
+      title: 'Contact Form'
     }
   ]
 };

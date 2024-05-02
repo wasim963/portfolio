@@ -5,12 +5,12 @@
     box-sizing: border-box;
     width: 100vw;
     height: 50px;
-    background-color: aqua;
+    background-color: $theme-primary-color;
     position: sticky;
     top: 0;
     left: 0;
     bottom: inherit;
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid $theme-primary-color;
 
     &__menu {
         width: 100%;

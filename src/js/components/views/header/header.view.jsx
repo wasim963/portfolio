@@ -29,7 +29,7 @@ export const header = ( props ) => {
       </nav>
       <div onClick={() => handleClick('theme')} className="ui-header__theme">
         <Icon
-          name={theme === 'light' ? 'sun' : 'moon'}
+          name={theme === 'light' ? 'moon' : 'sun'}
           width={32}
           height={32}
           fill={theme === 'light' ? '#fff' : '#000'}

@@ -3,9 +3,9 @@
 
 .ui-footer {
     box-sizing: border-box;
-    height: $footer-height;
-    background-color: aqua;
-    color: $standard-color-black;
+    min-height: $footer-height;
+    background-color: $theme-primary-color;
+    color: $standard-color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,16 +15,27 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 0.05rem;
 
+    @media only screen and ( max-width: 767px ) {
+        width: 100vw;
+        padding: 1rem 2rem;
+        text-align: center;
+
+        &__message {
+            margin-bottom: 1rem;
+        }
+    }
+
+
     &__message {
         font-size: $theme-font-size-7;
     }
 
     &__info {
-        font-size: $theme-font-size-5;
+        font-size: $theme-font-size-6;
 
         &--copyright {
             margin-left: 6px;
-            font-size: $theme-font-size-4;
+            font-size: $theme-font-size-5;
         }
     }
 }

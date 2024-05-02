@@ -1,5 +1,5 @@
 import React from "react";
-import photo from '../../../../assets/my-photo.jpeg';
+import photo from '../../../../assets/passportpic.jpg';
 
 // local dependencies
 import useImage from "@hooks/useImage";
@@ -39,7 +39,6 @@ export function AboutView( props ) {
               className="ui-about__body__left__wrapper__image"
               src={photo}
               alt="image"
-              height="auto"
             />
           </div>
           <div className="ui-about__body__left__social">
@@ -51,14 +50,12 @@ export function AboutView( props ) {
             className="ui-about__body__right__desc"
             dangerouslySetInnerHTML={{ __html: description }}
           ></div>
-          <div className="ui-about__body__right__actions" >
-            <Button 
-              primaryClassName={'ui-about__body__right__actions__action'}
-              title={'Download Resume'} 
-              preIcon={'download'}
-              handleClick={handleDownloadResume}
-            />
-          </div>
+          <Button 
+            primaryClassName={'ui-about__body__right__action'}
+            title={'Download Resume'} 
+            preIcon={'download'}
+            handleClick={handleDownloadResume}
+          />
         </div>
       </div>
     </Card>

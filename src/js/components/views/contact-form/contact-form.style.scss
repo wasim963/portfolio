@@ -4,6 +4,11 @@
 .ui-contact-form {
     box-sizing: border-box;
     width: 100%;
+    padding: 4rem 5rem;
+
+    @media only screen and ( max-width: 767px ) {
+        padding: 4rem 1rem;
+    }
 
     &__body {
         &__form {
@@ -11,8 +16,14 @@
             flex-direction: column;
 
             .ui-button {
+                margin-top: 4rem;
                 align-self: flex-end;
-                padding: 12px 20px;
+                padding: 12px 28px;
+                background-color: $theme-primary-color;
+                &__title {
+                    font-size: $theme-font-size-6;
+                    color: $standard-color-white;
+                }
             }
         }
     }

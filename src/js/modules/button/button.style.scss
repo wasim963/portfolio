@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: space-evenly;
     color: rgba(4, 20, 41, 0.57);    
-    background-color: aqua;
-    border: 1px solid aqua;
+    background-color: $theme-primary-color;
+    border: 1px solid $theme-primary-color;
     border-radius: 6px;
     padding: 8px 12px;
     cursor: pointer;
