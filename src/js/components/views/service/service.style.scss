@@ -6,7 +6,7 @@ $bg-image: url('../../../../assets/web-design.jpg');
 .ui-service {
     box-sizing: border-box;
     min-width: 300px;
-    border: 1px solid aqua;
+    border: 1px solid $theme-primary-color;
     display: flex;
     flex-direction: column;
     transition: transform 0.4s ease-in-out;

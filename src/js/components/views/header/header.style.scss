@@ -4,7 +4,7 @@
 .ui-header {
     box-sizing: border-box;
     height: $header-height;
-    background: aqua;
+    background: $theme-primary-color;
     color: white;
     display: flex;
     align-items: center;
@@ -23,7 +23,7 @@
 
         &--icon {
             a {
-                color: $standard-color-black;
+                color: $standard-color-white;
             }
         }
     }
@@ -38,11 +38,13 @@
             justify-content: space-evenly;
 
             &--link {
-                font-size: $theme-font-size-5;
+                font-size: $theme-font-size-6;
                 margin: auto 0;
+                letter-spacing: 0.1rem;
+                line-height: 2rem;
 
                 a {
-                    color: $standard-color-black;
+                    color: $standard-color-white;
                 }
             }
         }
