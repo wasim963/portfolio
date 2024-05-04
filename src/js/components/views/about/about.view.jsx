@@ -1,36 +1,34 @@
 import React from "react";
 import photo from '../../../../assets/passportpic.jpg';
 
+// local views to render
+import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
+import { button as Button } from "@modules/button";
+import { Card } from "@modules/card";
+
 // local dependencies
 import useImage from "@hooks/useImage";
 
-// local views to render
-import { Card } from "@modules/card";
-import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
-import { button as Button } from "@modules/button";
-
 export function AboutView( props ) {
   const { title, description, primaryClassName } = props;
-  const { loading, error, image } = useImage('Res_01May24.pdf');
-
   const widgetClassName = `ui-about ${primaryClassName}`;
+
+  const { loading, error, image } = useImage('Res_01May24.pdf');
 
   const handleDownloadResume = () => {
     // anchor link
     const element = document.createElement("a");
     element.href = image;
     element.download = "Wasim-resume-" + Date.now() + ".pdf";
-    // element.target='__blank'
 
     // simulate link click
     document.body.appendChild(element); // Required for this to work in FireFox
     element.click();
   }
+
   return (
     <Card
       primaryClassName={widgetClassName}
-      title={title}
-      // description={description}
     >
       <div className="ui-about__body">
         <div className="ui-about__body__left">
@@ -46,6 +44,7 @@ export function AboutView( props ) {
           </div>
         </div>
         <div className="ui-about__body__right">
+          <div className="ui-about__body__right__title">{ title }</div>
           <div 
             className="ui-about__body__right__desc"
             dangerouslySetInnerHTML={{ __html: description }}

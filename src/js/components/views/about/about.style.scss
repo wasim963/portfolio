@@ -3,9 +3,13 @@
 
 .ui-about {
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
+
+    .ui-card-header {
+        text-align: center;
+    }
 
     &__body {
         display: flex;
@@ -49,21 +53,35 @@
             max-width: 60%;
             display: flex;
             flex-direction: column;
-            padding: 30px 0;
+            padding: 10px 0 30px 0;
             text-align: left;
             color: $standard-color-black;
-            justify-content: space-around;
+            justify-content: space-between;
+            letter-spacing: 0.1rem;
+            line-height: 2.5rem;
+
+            &__title {
+                font-size: $theme-font-size-16;
+            }
     
             &__desc {
                 font-size: $theme-font-size-6;
-                letter-spacing: 0.1rem;
-                line-height: 2.5rem;
                 width: calc( 100% - 6rem );
             }
 
             &__action {
                 align-self: flex-start;
+                .ui-button__title {
+                    color: $standard-color-white;
+                }
+
             }
+        }
+    }
+
+    @media only screen and ( max-width: 767px ) {
+        &__body {
+            flex-direction: column;
         }
     }
 }
