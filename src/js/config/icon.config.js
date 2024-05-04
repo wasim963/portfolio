@@ -330,7 +330,7 @@ export const iconConfig = {
         markup: `
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" __width__ __height__ viewBox="0 0 24.000000 24.000000" preserveAspectRatio="xMidYMid meet">
             <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
-            fill="#000000" stroke="none">
+            __fill__ stroke="none">
             <path d="M100 175 c0 -40 -3 -45 -22 -45 -21 0 -21 -2 10 -32 l32 -33 32 33
             c31 30 31 32 10 32 -19 0 -22 5 -22 45 0 38 -3 45 -20 45 -17 0 -20 -7 -20
             -45z"/>

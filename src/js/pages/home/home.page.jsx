@@ -22,7 +22,10 @@ export const homePage = ( props ) => {
           const widgetClassName = `ui-home-page__widget ui-home-page__widget__${widget?.name}`
 
           return(
-              <View key={widget.name}  primaryClassName={widgetClassName} />
+            <View
+              key={widget.name}
+              primaryClassName={widgetClassName}
+            />
           )
         } )
       }

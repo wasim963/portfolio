@@ -19,7 +19,7 @@ export const button = ( props ) => {
             {
                 preIcon &&
                 <span className='ui-button__preIcon' >
-                    <Icon name={props.preIcon} width = {18} height={18} />
+                    <Icon name={props.preIcon} width = {18} height={18} fill='#fff' />
                 </span>
             }
             <span className='ui-button__title' >{ title }</span>

@@ -11,8 +11,8 @@ const underConstruction = () => {
 }
 
 const VIEWS = {
-  'timeline': ExperienceTimeline,
-  'educationWidget': EducationTimeline,
+  'experienceTimeline': ExperienceTimeline,
+  'educationTimeline': EducationTimeline,
 }
 
 
@@ -45,12 +45,12 @@ experiencePage.displayName = 'experiencePage';
 experiencePage.defaultProps = {
   widgets: [
     {
-      name: 'timeline',
-      value: 'education',
-      title: 'About'
+      name: 'experienceTimeline',
+      value: 'experience',
+      title: 'Experience'
     },
     {
-      name: 'educationWidget',
+      name: 'educationTimeline',
       value: 'education',
       title: 'Education'
     }
