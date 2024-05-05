@@ -24,7 +24,7 @@ export const experiencePage = ( props ) => {
       {
         widgets.map( widget => {
           const View = VIEWS[ widget?.name ];
-          const widgetClassName = `ui-experience-page__widget ui-experience-page__widget__${widget?.name}`
+          const widgetClassName = `ui-experience-page__widget ui-experience-page__widget__${widget?.name}`;
 
           return(
               <View 

@@ -3,11 +3,8 @@
 
 .ui-services {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: $standard-color-black;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    gap: 4rem;
 
     &__body {
         display: flex;
@@ -21,4 +18,20 @@
             min-height: 200px;
         }
     }
+
+     @media only screen and ( max-width: 767px ) {
+        .ui-card-header {
+            &__left {
+                gap: 2rem;
+            }
+        }
+        &__body {
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            &__service {
+                flex: none;
+            }
+        }
+     }
 }
