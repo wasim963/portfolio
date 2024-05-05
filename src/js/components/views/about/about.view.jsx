@@ -2,9 +2,9 @@ import React from "react";
 import photo from '../../../../assets/passportpic.jpg';
 
 // local views to render
+import { Card } from "@modules/card";
 import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
 import { button as Button } from "@modules/button";
-import { Card } from "@modules/card";
 
 // local dependencies
 import useImage from "@hooks/useImage";
