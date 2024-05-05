@@ -11,3 +11,39 @@ $themes: (
     text: $dark, 
   ), 
 );
+
+@mixin apply-theme { 
+   @each $theme, $map in $themes { 
+      // @debug "$theme, ----------------------------- $map: #{$theme}";
+     :global(.theme--#{$theme}) & { 
+       $theme-map: () !global; 
+  
+       @each $key, $submap in $map { 
+         $value: map-get($map, $key); 
+         $theme-map: map-merge( 
+           $theme-map, 
+           ( 
+             $key: $value, 
+           ) 
+         ) !global; 
+       } 
+       @content; 
+
+
+      // @debug "$theme-map: #{$theme-map}";
+  
+       $theme-map: null !global; 
+     }
+   }
+}
+
+
+
+@function t($key) { 
+  @debug "$theme-map after: #{$theme-map}";
+  @debug "$key after: #{$key}";
+
+  $x: map-get($theme-map, $key);
+  @debug "$x after: #{$x}";
+  @return $x; 
+}

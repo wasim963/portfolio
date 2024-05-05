@@ -7,6 +7,9 @@
     gap: 30px;
     width: 100%;
     margin-top: 1rem;
+    @include apply-theme { 
+        background-color: t('bg');
+    }
 
     .ui-card-header {
         text-align: center;
