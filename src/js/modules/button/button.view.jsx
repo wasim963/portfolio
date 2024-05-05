@@ -15,6 +15,7 @@ export const button = ( props ) => {
             onKeyDown={props?.handleClick}
             tabIndex={0}
             disabled={props.disabled}
+            aria-label={props?.ariaLabel}
         >
             {
                 preIcon &&
@@ -41,5 +42,6 @@ button.defaultProps = {
     primaryClassName: '',
     preIcon: '',
     postIcon: '',
-    handleClick: () => {}
+    handleClick: () => { },
+    ariaLabel: 'Button'
 }

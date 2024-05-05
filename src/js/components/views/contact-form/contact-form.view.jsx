@@ -70,7 +70,7 @@ ContactForm.displayName = 'ContactForm';
 
 // set default props
 ContactForm.defaultProps = {
-  title: "CONTACT",
+  title: "Contact",
   description: "<p>Get in touch or shoot me an email directly on <i>contact.wasim963@gmail.com</i></p>",
   primaryClassName: '',
   formFields: [

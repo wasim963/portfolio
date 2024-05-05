@@ -6,6 +6,10 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    margin-top: 1rem;
+    @include apply-theme { 
+        background-color: t('bg');
+    }
 
     .ui-card-header {
         text-align: center;
@@ -66,6 +70,7 @@
             }
     
             &__desc {
+                text-align: justify;
                 font-size: $theme-font-size-6;
                 width: calc( 100% - 6rem );
             }

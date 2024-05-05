@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 // local dependencies
 import { Icon } from '@modules/icon-bank';
+import { THEME_CONTEXT } from "@utils/themeProviderHook";
 
 export const header = ( props ) => {
-  const { navigations, theme, handleClick } = props;
+  const { navigations, handleClick } = props;
+  const { theme, toggleTheme } = useContext(THEME_CONTEXT);
 
   return (
     <header className="ui-header">
@@ -27,7 +29,11 @@ export const header = ( props ) => {
           }
         </ul>
       </nav>
-      <div onClick={() => handleClick('theme')} className="ui-header__theme">
+      <div
+        className="ui-header__theme"
+        onClick={() => toggleTheme()}
+        tabIndex={0}
+      >
         <Icon
           name={theme === 'light' ? 'moon' : 'sun'}
           width={32}
