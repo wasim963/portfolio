@@ -1,0 +1,13 @@
+$dark: #171717; 
+$light: #e5e5e5; 
+
+$themes: ( 
+  dark: ( 
+    bg: $dark, 
+    text: $light, 
+  ), 
+  light: ( 
+    bg: $light, 
+    text: $dark, 
+  ), 
+);
