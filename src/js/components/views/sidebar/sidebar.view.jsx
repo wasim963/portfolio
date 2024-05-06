@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@modules/icon-bank";
 
 export const sidebar = (props) => {
-  const { navigations, isMenuOpen, handleClick, theme } = props;
+  const { navigations, isMenuOpen, handleClick, theme, toggleTheme } = props;
 
   const listClassName = `ui-sidebar__list ${ isMenuOpen ? 'ui-sidebar__list--open' : '' } `
   return (
@@ -25,7 +25,7 @@ export const sidebar = (props) => {
         <span onClick={ () => handleClick( 'menu' )} >
           <Icon name={'hamburgerMenu'} width={28} height={28} />
         </span>
-        <span onClick={ () => handleClick( 'theme' )} >
+        <span onClick={ toggleTheme } >
           <Icon name={ theme === 'light' ? 'sun' : 'moon' } width={32} height={32} />
         </span>
       </div>

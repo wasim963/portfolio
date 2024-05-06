@@ -1,4 +1,5 @@
-$dark: #171717; 
+// $dark: #171717; 
+$dark: #0d1117;
 $light: #e5e5e5; 
 
 $themes: ( 
@@ -12,38 +13,37 @@ $themes: (
   ), 
 );
 
+
+$theme-map: null;
 @mixin apply-theme { 
-   @each $theme, $map in $themes { 
-      // @debug "$theme, ----------------------------- $map: #{$theme}";
-     :global(.theme--#{$theme}) & { 
-       $theme-map: () !global; 
-  
-       @each $key, $submap in $map { 
-         $value: map-get($map, $key); 
-         $theme-map: map-merge( 
+
+  @each $theme, $map in $themes {
+
+    .theme--#{$theme} & { 
+
+      $theme-map: () !global;
+
+      @each $key, $submap in $map { 
+
+        $value: map-get($map, $key); 
+
+        $theme-map: map-merge( 
            $theme-map, 
-           ( 
-             $key: $value, 
-           ) 
-         ) !global; 
-       } 
-       @content; 
+            ( 
+              $key: $value, 
+            ) 
+          ) !global; 
+      } 
 
-
-      // @debug "$theme-map: #{$theme-map}";
+      @content; 
   
-       $theme-map: null !global; 
-     }
-   }
+      $theme-map: null !global; 
+    }
+  }
 }
 
 
 
-@function t($key) { 
-  @debug "$theme-map after: #{$theme-map}";
-  @debug "$key after: #{$key}";
-
-  $x: map-get($theme-map, $key);
-  @debug "$x after: #{$x}";
-  @return $x; 
+@function getThemeValue($key) {
+  @return map-get($theme-map, $key);
 }
