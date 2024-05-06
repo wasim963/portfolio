@@ -5,12 +5,14 @@
     box-sizing: border-box;
     flex-basis: calc(50% - 42px);;
     min-height: 190px;
-    border: 1px solid $standard-color-black;
+    border: 1px solid;
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 1rem;
-    color: $standard-color-black;
+    @include apply-theme { 
+        border-color: getThemeValue('text');
+    }
 
     &__header {
         align-self: flex-end;
@@ -19,14 +21,16 @@
         align-items: center;
         z-index: 2;
         gap: 8px;
-        color: #3a3838;
         font-size: $theme-font-size-3;
         line-height: 1.5;
 
         &__period, &__role {
-            border: 1px solid $standard-color-black;
+            border: 1px solid;
             padding: 0.25rem 0.5rem;
             border-radius: 9999px;
+            @include apply-theme { 
+                border-color: getThemeValue('text');
+            }
         }
     }
 
@@ -76,7 +80,6 @@
             }
             p {
                 font-size: $theme-font-size-5;
-                color: #444445;
                 opacity: .5;
                 line-height: 1.5rem;
                 

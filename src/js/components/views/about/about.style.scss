@@ -7,9 +7,6 @@
     gap: 30px;
     width: 100%;
     margin-top: 1rem;
-    @include apply-theme { 
-        background-color: t('bg');
-    }
 
     .ui-card-header {
         text-align: center;
@@ -60,7 +57,6 @@
             gap: 3rem;
             padding: 10px 0 30px 0;
             text-align: left;
-            color: $standard-color-black;
             justify-content: space-between;
             letter-spacing: 0.1rem;
             line-height: 2.5rem;
@@ -77,10 +73,6 @@
 
             &__action {
                 align-self: flex-start;
-                .ui-button__title {
-                    color: $standard-color-white;
-                }
-
             }
         }
     }

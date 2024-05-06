@@ -5,13 +5,14 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    color: rgba(4, 20, 41, 0.57);    
+    justify-content: space-evenly;  
     background-color: $theme-primary-color;
-    border: 1px solid $theme-primary-color;
     border-radius: 6px;
     padding: 8px 12px;
     cursor: pointer;
+    @include apply-theme { 
+        color: getThemeValue('text');
+    }
 
     &__preIcon {
         margin-right: 0.5rem;
