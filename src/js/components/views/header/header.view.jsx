@@ -33,7 +33,7 @@ export const header = ( props ) => {
         tabIndex={0}
       >
         <Icon
-          name={theme === 'light' ? 'moon' : 'sun'}
+          name={theme === 'light' ? 'sun' : 'moon'}
           width={32}
           height={32}
           fill={theme === 'light' ? '#fff' : '#000'}
