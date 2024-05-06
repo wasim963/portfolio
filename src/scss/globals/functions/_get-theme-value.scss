@@ -1,0 +1,5 @@
+
+//  variable $theme-map is provided by mixins
+@function getThemeValue($key) {
+  @return map-get($theme-map, $key);
+}
