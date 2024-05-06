@@ -23,3 +23,19 @@ $theme-primary-color: rgba(5, 160, 160, 0.9);
 // standard colors;
 $standard-color-white: #ffffff;
 $standard-color-black: #000000;
+
+// theme
+// $dark: #171717; 
+$dark: #0d1117;
+$light: #e5e5e5; 
+
+$themes: ( 
+  dark: ( 
+    bg: $dark, 
+    text: $light, 
+  ), 
+  light: ( 
+    bg: $light, 
+    text: $dark, 
+  ), 
+);

@@ -1,26 +1,10 @@
-// $dark: #171717; 
-$dark: #0d1117;
-$light: #e5e5e5; 
-
-$themes: ( 
-  dark: ( 
-    bg: $dark, 
-    text: $light, 
-  ), 
-  light: ( 
-    bg: $light, 
-    text: $dark, 
-  ), 
-);
-
-
 $theme-map: null;
+
 @mixin apply-theme { 
 
   @each $theme, $map in $themes {
 
     .theme--#{$theme} & { 
-
       $theme-map: () !global;
 
       @each $key, $submap in $map { 
@@ -36,14 +20,7 @@ $theme-map: null;
       } 
 
       @content; 
-  
       $theme-map: null !global; 
     }
   }
-}
-
-
-
-@function getThemeValue($key) {
-  @return map-get($theme-map, $key);
 }
