@@ -9,35 +9,37 @@ export const header = ( props ) => {
 
   return (
     <header className="ui-header">
-      <div className="ui-header__logo">
-        <div className="ui-header__logo--icon">
-            <Link to={'/'} >Wasim</Link>
-          </div>
-      </div>
-      <nav className="ui-header__wrapper">
-        <ul className="ui-header__wrapper__navs">
-          {
-            Array.isArray( navigations ) && navigations.map( navigation => {
-              return(
-                <li key={navigation?.name} className="ui-header__wrapper__navs--link">
-                  <Link to={navigation?.path} >{navigation.title}</Link>
-                </li>
-              )
-            } )
-          }
-        </ul>
-      </nav>
-      <div
-        className="ui-header__theme"
-        onClick={toggleTheme}
-        tabIndex={0}
-      >
-        <Icon
-          name={theme === 'light' ? 'sun' : 'moon'}
-          width={32}
-          height={32}
-          fill={theme === 'light' ? '#fff' : '#000'}
-        />
+      <div className="ui-header__container">
+        <div className="ui-header__container__logo">
+          <div className="ui-header__container__logo--icon">
+              <Link to={'/'} >Wasim</Link>
+            </div>
+        </div>
+        <nav className="ui-header__container__wrapper">
+          <ul className="ui-header__container__wrapper__nav">
+            {
+              Array.isArray( navigations ) && navigations.map( navigation => {
+                return(
+                  <li key={navigation?.name} className="ui-header__container__wrapper__nav--link">
+                    <Link to={navigation?.path} >{navigation.title}</Link>
+                  </li>
+                )
+              })
+            }
+            <li
+              className="ui-header__container__wrapper__nav--link"
+              onClick={toggleTheme}
+              tabIndex={0}
+            >
+              <Icon
+                name={theme === 'light' ? 'sun' : 'moon'}
+                width={28}
+                height={28}
+                fill={'#e5e5e5'}
+              />
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

@@ -14,9 +14,15 @@
         color: getThemeValue('text');
     }
 
-    &__preIcon {
+    &__preIcon, &__postIcon {
         margin-right: 0.5rem;
         margin-top: 0.5rem;
+
+        svg g {
+            @include apply-theme {
+                fill: getThemeValue('text');
+            }
+        }
     }
 
     &__title {
