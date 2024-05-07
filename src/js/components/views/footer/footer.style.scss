@@ -4,12 +4,11 @@
 .ui-footer {
     box-sizing: border-box;
     min-height: $footer-height;
-    background-color: $theme-primary-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-top: 0.5px solid $standard-color-white;
+    border-top: 0.1px solid $standard-color-white;
     max-width: 100vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 0.05rem;
@@ -23,7 +22,6 @@
             margin-bottom: 1rem;
         }
     }
-
 
     &__message {
         font-size: $theme-font-size-7;
