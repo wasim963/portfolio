@@ -7,7 +7,7 @@ import { Icon } from "@modules/icon-bank";
 export const sidebar = (props) => {
   const { navigations, isMenuOpen, handleClick, theme, toggleTheme } = props;
 
-  const listClassName = `ui-sidebar__list ${ isMenuOpen ? 'ui-sidebar__list--open' : '' } `
+  const listClassName = `ui-sidebar__list ${isMenuOpen ? 'ui-sidebar__list--open' : ''} `;
   return (
     <nav className='ui-sidebar'>
       <ul className={listClassName}>
@@ -23,10 +23,10 @@ export const sidebar = (props) => {
       </ul>
       <div className='ui-sidebar__menu' >
         <span onClick={ () => handleClick( 'menu' )} >
-          <Icon name={'hamburgerMenu'} width={28} height={28} />
+          <Icon name={ isMenuOpen ? 'close': 'hamburgerMenu'} width={24} height={24} />
         </span>
         <span onClick={ toggleTheme } >
-          <Icon name={ theme === 'light' ? 'sun' : 'moon' } width={32} height={32} />
+          <Icon name={ theme === 'light' ? 'moon' : 'sun' } width={32} height={32} />
         </span>
       </div>
     </nav>

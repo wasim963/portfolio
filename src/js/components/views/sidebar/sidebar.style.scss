@@ -10,8 +10,11 @@
     top: 0;
     left: 0;
     bottom: inherit;
-    border-bottom: 2px solid $theme-primary-color;
     z-index: 999;
+    
+    @include apply-theme {
+        border-bottom: 1px solid getThemeValue('bg');
+    }
 
     &__menu {
         width: 100%;
@@ -20,6 +23,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &:last-child {
+            svg {
+                border-radius: 50%;
+            }
+        }
+
+        span svg {
+            @include apply-theme {
+                fill: getThemeValue('text');
+            }
+        }
     }
 
     &__list {
@@ -31,21 +46,26 @@
 
         &__item {
             height: 46px;
-            padding: 12px 3vw;
+            padding: 20px 3vw;
             font-size: $theme-font-size-4;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             cursor: pointer;
+            @include apply-theme {
+                border-bottom: 1px solid getThemeValue('bg');
+            }
             
             a {
-                color: $standard-color-white;
+                @include apply-theme {
+                    color: getThemeValue('text');
+                }
             }
         }
         
         &--open {
             height: 200px;
-            transition: height 0.3s ease-out;
-            background-color: rgb(66, 87, 73);
-            padding-top: 10px;
+            transition: height 0.4s ease-out;
+            background-color: $theme-primary-color;
+            padding-top: 20px;
         }
     }
 
