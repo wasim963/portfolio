@@ -11,6 +11,7 @@
     left: 0;
     bottom: inherit;
     border-bottom: 2px solid $theme-primary-color;
+    z-index: 999;
 
     &__menu {
         width: 100%;
@@ -45,7 +46,6 @@
             transition: height 0.3s ease-out;
             background-color: rgb(66, 87, 73);
             padding-top: 10px;
-            max-width: 400px;
         }
     }
 
