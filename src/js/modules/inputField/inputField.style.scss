@@ -17,6 +17,21 @@
 
     &__input {
         padding: 11px;
+        @include apply-theme {
+            background-color: getThemeValue('bg');
+            color: getThemeValue('text');
+        }
+
+        &::placeholder,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            @include apply-theme {
+                -webkit-box-shadow: 0 0 0 30px getThemeValue('bg') inset;
+                -webkit-text-fill-color: getThemeValue('text');
+            }
+        }
 
         &__error {
             outline: none;

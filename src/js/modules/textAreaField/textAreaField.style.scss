@@ -19,6 +19,17 @@
 
     &__input {
         padding: 11px;
+        @include apply-theme {
+            background-color: getThemeValue('bg');
+            color: getThemeValue('text');
+        }
+
+        &::placeholder {
+            @include apply-theme {
+                background-color: getThemeValue('bg');
+                color: getThemeValue('text');
+            }
+        }
         
         &__error {
             outline: none;
