@@ -21,6 +21,14 @@
         &__message {
             margin-bottom: 1rem;
         }
+
+        &__links {
+            margin-bottom: 1rem;
+        }
+
+        &__info {
+            margin-bottom: 1rem;
+        }
     }
 
     &__message {
@@ -29,6 +37,10 @@
 
     &__info {
         font-size: $theme-font-size-6;
+
+        &--logo {
+            color: $theme-primary-color;
+        }
 
         &--copyright {
             margin-left: 6px;

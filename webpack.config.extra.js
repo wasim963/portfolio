@@ -14,6 +14,7 @@ exports.alias = {
     '@config': path.resolve(__dirname, 'src/js/config'),
     '@hooks': path.resolve(__dirname, 'src/js/hooks'),
     '@resolvers': path.resolve(__dirname, 'src/js/resolvers'),
+    '@router': path.resolve(__dirname, 'src/js/router'),
 
     // scss globals
     'scss-globals': path.resolve( __dirname, 'src/scss/globals/index.scss' )

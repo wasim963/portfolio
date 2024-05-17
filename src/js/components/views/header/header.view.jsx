@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // local dependencies
 import { Icon } from '@modules/icon-bank';
@@ -12,7 +12,7 @@ export const header = ( props ) => {
       <div className="ui-header__container">
         <div className="ui-header__container__logo">
           <div className="ui-header__container__logo--icon">
-              <Link to={'/'} >Wasim</Link>
+              <NavLink to={'/'} >Wasim</NavLink>
             </div>
         </div>
         <nav className="ui-header__container__wrapper">
@@ -20,14 +20,21 @@ export const header = ( props ) => {
             {
               Array.isArray( navigations ) && navigations.map( navigation => {
                 return(
-                  <li key={navigation?.name} className="ui-header__container__wrapper__nav--link">
-                    <Link to={navigation?.path} >{navigation.title}</Link>
+                  <li key={navigation?.name} className="ui-header__container__wrapper__nav__link">
+                    <NavLink
+                      to={navigation?.path}
+                      className={({ isActive }) => 
+                        isActive ? 'ui-header__container__wrapper__nav__link--active': ''
+                      }
+                    >
+                      {navigation.title}
+                    </NavLink>
                   </li>
                 )
               })
             }
             <li
-              className="ui-header__container__wrapper__nav--link"
+              className="ui-header__container__wrapper__nav__link"
               onClick={toggleTheme}
               tabIndex={0}
             >
