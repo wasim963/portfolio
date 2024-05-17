@@ -4,13 +4,14 @@
 .ui-sidebar {
     box-sizing: border-box;
     width: 100vw;
-    height: 50px;
+    height: $header-height-mobile;
     background-color: $theme-primary-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: sticky;
     top: 0;
     left: 0;
-    bottom: inherit;
-    z-index: 999;
+    right: 0;
+    z-index: 3000;
     
     @include apply-theme {
         border-bottom: 1px solid getThemeValue('bg');
@@ -23,6 +24,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &__item {
+            font-size: $theme-font-size-7;
+            a {
+                @include apply-theme {
+                    color: getThemeValue('text');
+                }
+            }
+        }
 
         &:last-child {
             svg {
@@ -41,7 +51,8 @@
         width: 100%;
         height: 0;
         position: absolute;
-        top: 50px;
+        left: 0;
+        top: $header-height-mobile;
         overflow: hidden;
 
         &__item {

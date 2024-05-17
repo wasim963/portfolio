@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // local dependencies
 import { Icon } from "@modules/icon-bank";
@@ -15,18 +15,40 @@ export const sidebar = (props) => {
           navigations.map((navigation => {
             return (
               <li key={navigation?.name} className="ui-sidebar__list__item">
-                <Link to={navigation?.path} >{navigation.title?.toUpperCase()}</Link>
+                <NavLink to={navigation?.path} >{navigation.title?.toUpperCase()}</NavLink>
               </li>
             )
           } ) )
         }
       </ul>
       <div className='ui-sidebar__menu' >
-        <span onClick={ () => handleClick( 'menu' )} >
-          <Icon name={ isMenuOpen ? 'close': 'hamburgerMenu'} width={24} height={24} />
+        <span
+          className='ui-sidebar__menu__item'
+          onClick={() => handleClick('menu')}
+        >
+          <Icon
+            name={isMenuOpen ? 'close' : 'hamburgerMenu'}
+            width={24}
+            height={24}
+          />
         </span>
-        <span onClick={ toggleTheme } >
-          <Icon name={ theme === 'light' ? 'moon' : 'sun' } width={32} height={32} />
+        <span
+          className='ui-sidebar__menu__item'
+        >
+          <NavLink
+            to={'/'}
+          >Wasim
+          </NavLink>
+        </span>
+        <span
+          className='ui-sidebar__menu__item'
+          onClick={toggleTheme}
+        >
+          <Icon
+            name={theme === 'light' ? 'moon' : 'sun'}
+            width={32}
+            height={32}
+          />
         </span>
       </div>
     </nav>

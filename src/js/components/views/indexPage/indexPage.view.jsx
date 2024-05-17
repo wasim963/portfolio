@@ -1,7 +1,5 @@
 import React from 'react';
-// import { RouterOutlet } from '../../../router';
-// import { RouterOutlet } from '../../../router';
-import { RouterOutlet } from '../../../router'
+import { RouterOutlet } from '@router'
 
 export const indexPageView = () => {
   return (
