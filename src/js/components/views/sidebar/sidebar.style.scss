@@ -12,10 +12,6 @@
     left: 0;
     right: 0;
     z-index: 3000;
-    
-    @include apply-theme {
-        border-bottom: 1px solid getThemeValue('bg');
-    }
 
     &__menu {
         width: 100%;
@@ -49,16 +45,15 @@
         left: 0;
         top: $header-height-mobile;
         overflow: hidden;
+        transition: height 0.3s ease-out;
+        background-color: $theme-primary-color;
 
         &__item {
-            height: 46px;
-            padding: 20px 3vw;
+            height: 5rem;
+            padding: 2rem 3vw;
             font-size: $theme-font-size-4;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             cursor: pointer;
-            @include apply-theme {
-                border-bottom: 1px solid getThemeValue('bg');
-            }
             
             a {
                 @include apply-theme {
@@ -76,9 +71,6 @@
         
         &--open {
             height: 200px;
-            transition: height 0.4s ease-out;
-            background-color: $theme-primary-color;
-            padding-top: 20px;
         }
     }
 
