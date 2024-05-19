@@ -2,12 +2,12 @@ import React from "react";
 
 // local views to render
 import { AboutView } from '@views/about';
-import { educationTimeline as EducationTimeline } from '@views/education-timeline';
+import { ServicesView } from '@views/services';
 import { SkillsView } from '@views/skills';
 
 const VIEWS = {
   'about': AboutView,
-  'educationTimeline': EducationTimeline,
+  'services': ServicesView,
   'skills': SkillsView
 }
 
@@ -44,10 +44,11 @@ homePage.defaultProps = {
       value: 'about',
       title: 'About'
     },
+    ,
     {
-      name: 'educationTimeline',
-      value: 'education',
-      title: 'Education'
+      name: 'services',
+      value: 'services',
+      title: 'Services'
     },
     {
       name: 'skills',

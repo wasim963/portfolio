@@ -9,7 +9,7 @@
 
     &__links {
         display: flex;
-        justify-content: space-evenly;
+        gap: 2.5rem;
 
         &--link {
             cursor: pointer;
