@@ -56,7 +56,7 @@ educationTimeline.defaultProps = {
     },
     {
         company: 'Jawahar Navodaya Vidyalaya',
-        designation: 'Intermediate Of Science',
+        designation: 'I.Sc',
         startDate: '2013-04-01',
         endDate: '2015-04-30',
         location: 'Kishanganj, Bihar',
