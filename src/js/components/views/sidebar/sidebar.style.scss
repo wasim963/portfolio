@@ -34,13 +34,8 @@
             }
         }
 
-        &:last-child {
-            svg {
-                border-radius: 50%;
-            }
-        }
-
         span svg {
+            border-radius: 50%;
             @include apply-theme {
                 fill: getThemeValue('text');
             }
@@ -68,6 +63,13 @@
             a {
                 @include apply-theme {
                     color: getThemeValue('text');
+                }
+            }
+
+            &--active {
+                @include apply-theme {
+                    color: getThemeValue('bg') !important;
+                    font-weight: 600;
                 }
             }
         }

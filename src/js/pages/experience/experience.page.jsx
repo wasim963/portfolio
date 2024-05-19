@@ -2,7 +2,7 @@ import React from 'react';
 
 // react views to render
 import { experienceTimeline as ExperienceTimeline } from '@views/experience-timeline';
-import { ServicesView } from '@views/services';
+import { educationTimeline as EducationTimeline } from '@views/education-timeline';
 
 const underConstruction = () => {
   return(
@@ -12,7 +12,7 @@ const underConstruction = () => {
 
 const VIEWS = {
   'experienceTimeline': ExperienceTimeline,
-  'services': ServicesView
+  'educationTimeline': EducationTimeline
 }
 
 
@@ -50,9 +50,9 @@ experiencePage.defaultProps = {
       title: 'Experience'
     },
     {
-      name: 'services',
-      value: 'services',
-      title: 'Services'
+      name: 'educationTimeline',
+      value: 'education',
+      title: 'Education'
     }
   ]
 };

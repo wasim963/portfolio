@@ -45,7 +45,13 @@ export const sidebar = (props) => {
           navigations.map((navigation => {
             return (
               <li key={navigation?.name} className="ui-sidebar__list__item">
-                <NavLink to={navigation?.path} >{navigation.title?.toUpperCase()}</NavLink>
+                <NavLink
+                  to={navigation?.path}
+                  className={({ isActive }) => 
+                    isActive ? 'ui-sidebar__list__item--active': ''
+                  }
+                >{navigation.title?.toUpperCase()}
+                </NavLink>
               </li>
             )
           } ) )
