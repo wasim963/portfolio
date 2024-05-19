@@ -7,20 +7,9 @@ import { Icon } from "@modules/icon-bank";
 export const sidebar = (props) => {
   const { navigations, isMenuOpen, handleClick, theme, toggleTheme } = props;
 
-  const listClassName = `ui-sidebar__list ${isMenuOpen ? 'ui-sidebar__list--open' : ''} `;
+  const listClassName = `ui-sidebar__list ${isMenuOpen ? 'ui-sidebar__list--open' : 'ui-sidebar__list--close'} `;
   return (
     <nav className='ui-sidebar'>
-      <ul className={listClassName}>
-        {
-          navigations.map((navigation => {
-            return (
-              <li key={navigation?.name} className="ui-sidebar__list__item">
-                <NavLink to={navigation?.path} >{navigation.title?.toUpperCase()}</NavLink>
-              </li>
-            )
-          } ) )
-        }
-      </ul>
       <div className='ui-sidebar__menu' >
         <span
           className='ui-sidebar__menu__item'
@@ -51,6 +40,17 @@ export const sidebar = (props) => {
           />
         </span>
       </div>
+      <ul className={listClassName}>
+        {
+          navigations.map((navigation => {
+            return (
+              <li key={navigation?.name} className="ui-sidebar__list__item">
+                <NavLink to={navigation?.path} >{navigation.title?.toUpperCase()}</NavLink>
+              </li>
+            )
+          } ) )
+        }
+      </ul>
     </nav>
   )
 }

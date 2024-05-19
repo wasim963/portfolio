@@ -29,6 +29,17 @@
     @media only screen and ( max-width: 767px ) {
         max-width: 100vw;
         padding: 2rem;
+
+        &-header {
+            &__left {
+                &__title {
+                    font-size: $theme-font-size-14;
+                }
+                &__description {
+                    font-size: $theme-font-size-9;
+                }
+            }
+        }
     }
 
 }

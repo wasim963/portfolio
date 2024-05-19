@@ -8,8 +8,9 @@
     justify-content: space-evenly;  
     background-color: $theme-primary-color;
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 6px 10px;
     cursor: pointer;
+    
     @include apply-theme { 
         color: getThemeValue('text');
     }

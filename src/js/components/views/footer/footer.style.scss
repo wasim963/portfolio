@@ -35,6 +35,11 @@
         font-size: $theme-font-size-7;
     }
 
+    &__links {
+        display: flex;
+        justify-content: center;
+    }
+
     &__info {
         font-size: $theme-font-size-6;
 
