@@ -6,7 +6,15 @@
     min-height: $header-height;
     display: flex;
     justify-content: center;
-    padding: 4rem 0;
+    padding: 3rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    @include apply-theme {
+        background-color: getThemeValue('bg');
+    }
 
     &__container {
         height: 100%;

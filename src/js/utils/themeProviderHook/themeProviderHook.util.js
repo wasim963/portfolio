@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 
 const initialThemeState = {
-    theme: `light`
+    theme: `dark`
 }
 
 export const THEME_CONTEXT = createContext(initialThemeState);
