@@ -13,6 +13,7 @@ export function footer( props ) {
         <span className="ui-footer__info--logo">wasim.in</span>
         <span className="ui-footer__info--copyright">&copy; 2023</span>
       </div>
+      <div className="ui-footer__gradient"></div>
     </footer>
   );
 }
