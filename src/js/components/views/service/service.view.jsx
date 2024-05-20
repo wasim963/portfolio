@@ -25,6 +25,10 @@ export function ServiceView( props ) {
             (error ? <p>config?.image</p> : <img src={image} alt={config?.image} />)
         } 
       </div>
+      <div className="ui-service__gradient ui-service__gradient--top"></div>
+      <div className="ui-service__gradient ui-service__gradient--right"></div>
+      <div className="ui-service__gradient ui-service__gradient--bottom"></div>
+      <div className="ui-service__gradient ui-service__gradient--left"></div>
     </Card>
   );
 }
