@@ -50,7 +50,7 @@ experienceTimeline.defaultProps = {
       designation: 'SDE-2',
       startDate: '2024-07-01',
       endDate: null,
-      location: 'Bangluru',
+      location: 'Bangaluru',
       icon: 'hashedin.webp',
       roleType: 'Full-Time'
     },

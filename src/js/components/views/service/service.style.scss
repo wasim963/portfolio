@@ -8,7 +8,7 @@ $bg-image: url('../../../../assets/web-design.jpg');
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     
     @include apply-theme {
         border: 1px solid getThemeValue('text');

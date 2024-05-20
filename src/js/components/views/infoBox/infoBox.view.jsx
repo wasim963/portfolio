@@ -28,6 +28,10 @@ export const infoBox = ( props ) => {
                     <p>{ props?.location }</p>
                 </div>
             </div>
+            <div className="ui-info-box__gradient ui-info-box__gradient--top"></div>
+            <div className="ui-info-box__gradient ui-info-box__gradient--right"></div>
+            <div className="ui-info-box__gradient ui-info-box__gradient--bottom"></div>
+            <div className="ui-info-box__gradient ui-info-box__gradient--left"></div>
         </div>
     )
 }
