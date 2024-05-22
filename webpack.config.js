@@ -1,8 +1,49 @@
 const path = require('path');
+const webpack = require( 'webpack' );
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const sassExport = require('sass-export');
+
+/*=========== WEBPACK EXTRA CONFIG ===========*/
+
+// extra webpack configuration
 const { alias } = require('./webpack.config.extra');
+
+/**
+ * @desc Set valid node environment variable
+ */
 const NodeEnv = process.env.NODE_ENV;
+
+/**
+ * @desc Set build platform based on environment variable
+ */
+const PLATFORM = process.env.PLATFORM ? process.env.PLATFORM : 'default';
+
+/**
+ * @desc Name of the theme.
+ */
+const THEME = process.env.THEME ? 'THEME': 'main';
+
+/**
+ * @desc SASS environment `.scss` file and compile global variables for JS environment
+ */
+const SASS_ENV_FOLDER_NAME = THEME;
+const SASS_ENV_FILE_PATH = `./src/scss/themes/${ SASS_ENV_FOLDER_NAME }/${ PLATFORM }.theme.scss`;
+
+// { variables: [ { name, value, compiledValue }, ... ], ... }
+const SASS_THEME = sassExport.exporter( {
+    inputFiles: [ SASS_ENV_FILE_PATH ],
+    includePaths: [ './src/scss/themes/' + SASS_ENV_FOLDER_NAME ]
+}).getStructured().variables;
+
+// return an array of duplets [ [key, value], [key, value] ]
+const sassThemePairs = SASS_THEME.map( ( variable ) => {
+    const { name, compiledValue } = variable;
+
+    // remove `$` prefix from the variable name
+    return [ name.slice( 1 ), compiledValue ];
+})
+
 
 module.exports = {
     entry: [
@@ -102,6 +143,15 @@ module.exports = {
 
         new MiniCSSExtractPlugin( {
             filename: 'css/styles.css'
+        }),
+        
+
+        new webpack.DefinePlugin( {
+            // provide SCSS global variables in JavaScript
+            THEME: JSON.stringify( sassThemePairs.reduce((acc, current) => {
+                acc[ current[0]] = current[1];
+                return acc;
+            }, {} ) )
         } )
     ],
     performance: {
