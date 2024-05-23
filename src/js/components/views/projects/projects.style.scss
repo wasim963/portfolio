@@ -1,0 +1,36 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-projects {
+    box-sizing: border-box;
+    gap: 4rem;
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__project {
+            flex: 0 0 48.5%;
+            margin-bottom: 20px;
+            min-height: 520px;
+        }
+    }
+
+     @media only screen and ( max-width: 767px ) {
+        .ui-card-header {
+            &__left {
+                gap: 2rem;
+            }
+        }
+        &__body {
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            &__project {
+                flex: none;
+            }
+        }
+     }
+}

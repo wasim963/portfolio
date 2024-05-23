@@ -18,7 +18,7 @@ export function ServicesView( props ) {
       <div className="ui-services__body">
         {
           services.map( service => {
-            const _primaryClassName = `ui-services__body__service ui-services__body__service__${service.name}`
+            const _primaryClassName = `ui-services__body__service ui-services__body__service--${service.name}`
             return(
               <ServiceView
                 key={service.name}
