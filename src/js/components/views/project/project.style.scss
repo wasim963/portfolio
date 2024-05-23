@@ -1,0 +1,113 @@
+// import global variables
+@import '~scss-globals';
+
+$bg-image: url('../../../../assets/web-design.jpg');
+
+.ui-project {
+    box-sizing: border-box;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+        transform: scale(1.02) rotate(0.5deg);
+    }
+
+    .ui-card-header {
+        order: 2;
+        text-align: left;
+        letter-spacing: 0.05rem;
+
+        &__left {
+            &__title {
+                font-size: $theme-font-size-8;
+            }
+
+            &__description {
+                font-size: $theme-font-size-6;
+            }
+        }
+    }
+
+    &__body {
+        order: 1;
+        position: relative;
+
+        img {
+            height: 200px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+    }
+
+    &__repo-link {
+        position: absolute;
+        top: 3.5rem;
+        right: 4rem;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    &__skills {
+        position: absolute;
+        bottom: 3rem;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-size: $theme-font-size-4;
+
+        &__skill {
+            border: 1px solid;
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    &__gradient {
+        height: 1px;
+        width: 100%;
+        margin: 0 auto;
+        @include apply-theme {
+            background-color: getThemeValue('bg');
+            background-image: linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: -o-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: -moz-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: -webkit-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: -ms-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.01, getThemeValue('bg')), color-stop(0.5, getThemeValue('text')), color-stop(0.99, getThemeValue('bg')) );
+        }
+        
+        &--top {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &--right {
+            width: 95%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: rotate(90deg);
+            transform-origin: 100% 0;
+        }
+
+        &--bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &--left {
+            width: 95%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: rotate(90deg);
+            transform-origin: 0 0;
+        }
+    }
+}

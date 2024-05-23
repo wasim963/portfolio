@@ -3,10 +3,18 @@ import React from "react";
 // local views to render
 import { AboutView } from '@views/about';
 import { ServicesView } from '@views/services';
+import { ProjectsView } from '@views/projects';
+
+const underConstruction = () => {
+  return(
+    <h3>Under Construction</h3>
+  )
+}
 
 const VIEWS = {
   'about': AboutView,
-  'services': ServicesView
+  'services': ServicesView,
+  'projects': ProjectsView
 }
 
 export const homePage = ( props ) => {
@@ -47,6 +55,11 @@ homePage.defaultProps = {
       name: 'services',
       value: 'services',
       title: 'Services'
+    },
+    {
+      name: 'projects',
+      value: 'projects',
+      title: 'Projects'
     }
   ]
 };
