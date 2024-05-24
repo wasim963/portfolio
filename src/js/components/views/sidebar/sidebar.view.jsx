@@ -21,14 +21,21 @@ export const sidebar = (props) => {
             height={24}
           />
         </span>
-        <span
-          className='ui-sidebar__menu__item'
-        >
-          <NavLink
-            to={'/'}
-          >Wasim
+        <div className='ui-sidebar__menu__item'>
+          <NavLink className="ui-sidebar__menu__item__icon" to={'/'} >
+            <div className="ui-sidebar__menu__item__icon__left">
+              <h4>Wasim</h4>
+              <span>Living The Code</span>
+            </div>
+            <div className="ui-sidebar__menu__item__icon__right">
+              <h3>
+                {"<"}
+                <span>{"/"}</span>
+                {">"}
+              </h3>
+            </div>
           </NavLink>
-        </span>
+        </div>
         <span
           className='ui-sidebar__menu__item'
           onClick={toggleTheme}

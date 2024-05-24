@@ -7,6 +7,27 @@ import { Card } from "@modules/card";
 export function ProjectsView( props ) {
   const { title, description, projects, primaryClassName } = props;
 
+    React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ui-projects__body__project__show");
+        } else {
+          entry.target.classList.remove("ui-projects__body__project__show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".ui-projects__body__project");
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+    // Clean up the memory before the component gets destroyed:
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+
   const widgetClassName = `ui-projects ${primaryClassName}`;
 
   return (
