@@ -2,9 +2,10 @@ import React from 'react';
 
 // local views to render
 import { Icon } from '@modules/icon-bank';
+import { ButtonPreloader } from '@modules/buttonPreloader';
 
 export const button = ( props ) => {
-    const { title, primaryClassName, preIcon, postIcon } = props;
+    const { title, primaryClassName, preIcon, postIcon, isLoading } = props;
     const widgetClassName = `ui-button ${primaryClassName}`;
 
     return (
@@ -18,7 +19,7 @@ export const button = ( props ) => {
             aria-label={props?.ariaLabel}
         >
             {
-                preIcon &&
+                !isLoading && preIcon &&
                 <span className='ui-button__preIcon' >
                     <Icon
                         name={props.preIcon}
@@ -27,9 +28,16 @@ export const button = ( props ) => {
                     />
                 </span>
             }
-            <span className='ui-button__title' >{ title }</span>
             {
-                postIcon &&
+                !isLoading &&
+                <span className='ui-button__title' >{ title }</span>
+            }
+            {
+                isLoading &&
+                <ButtonPreloader />
+            }
+            {
+                !isLoading && postIcon &&
                 <span className='ui-button__postIcon' >
                     <Icon
                         name={props.postIcon}

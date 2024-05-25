@@ -66,7 +66,7 @@ AboutView.displayName = 'AboutView';
 
 // set default props
 AboutView.defaultProps = {
-  title: "Who's this guy?",
-  description: "<p>I'm a Front-End Developer for ChowNow in Los Angeles, CA. I have serious passion for UI effects, animations and creating intuitive,dynamic user experiences.</br></br>When I am not coding or pushing pixels you will find me reading a book or binge watching</p>",
+  title: "I AM WASIM AKRAM",
+  description: "<p>I'm a skilled software developer with experience in JavaScript, and expertise in frameworks like React, Node.js. I am passionate about turning design concepts into interactive reality and love exploring latest tools and technology.</br></br>When I am not coding or pushing pixels you will find me reading a book or binge watching</p>",
   primaryClassName:''
 };

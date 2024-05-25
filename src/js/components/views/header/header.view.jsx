@@ -11,9 +11,19 @@ export const header = ( props ) => {
     <header className="ui-header">
       <div className="ui-header__container">
         <div className="ui-header__container__logo">
-          <div className="ui-header__container__logo--icon">
-              <NavLink to={'/'} >Wasim</NavLink>
+          <NavLink className="ui-header__container__logo__icon" to={'/'} >
+            <div className="ui-header__container__logo__icon__left">
+              <h4>Wasim</h4>
+              <span>Living The Code</span>
             </div>
+            <div className="ui-header__container__logo__icon__right">
+              <h1>
+                {"<"}
+                <span>{"/"}</span>
+                {">"}
+              </h1>
+            </div>
+          </NavLink>
         </div>
         <nav className="ui-header__container__wrapper">
           <ul className="ui-header__container__wrapper__nav">
@@ -34,7 +44,7 @@ export const header = ( props ) => {
               })
             }
             <li
-              className="ui-header__container__wrapper__nav__link"
+              className={`ui-header__container__wrapper__nav__link ui-header__container__wrapper__nav__link--${theme}`}
               onClick={toggleTheme}
               tabIndex={0}
             >

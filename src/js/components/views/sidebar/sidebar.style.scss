@@ -23,9 +23,31 @@
 
         &__item {
             font-size: $theme-font-size-7;
-            a {
+
+            &__icon {
+                display: flex;
+                color: $theme-primary-color;
+                text-align: center;
+                align-items: center;
+                gap: 0.5rem;
                 @include apply-theme {
                     color: getThemeValue('text');
+                }
+
+                &__left {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        font-size: $theme-font-size-0;
+                    }
+                }
+                
+                &__right {
+                    h3 {
+                        font-size: $theme-font-size-14;
+                        line-height: 1rem;
+                    }
                 }
             }
         }

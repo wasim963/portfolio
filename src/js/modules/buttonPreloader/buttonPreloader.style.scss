@@ -1,0 +1,29 @@
+// import global variables
+@import '~scss-globals';
+
+.ui-button-preloader {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+    animation: spin 0.6s linear infinite;
+
+    @include apply-theme {
+        border-color: getThemeValue('bg') getThemeValue('bg') getThemeValue('bg') getThemeValue('text')
+    }
+
+    @media screen and ( max-width: 767px ) {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

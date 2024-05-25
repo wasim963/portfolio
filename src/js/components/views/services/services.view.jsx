@@ -7,6 +7,26 @@ import { Card } from "@modules/card";
 export function ServicesView( props ) {
   const { title, description, services, primaryClassName } = props;
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("ui-services__body__service__show");
+        } else {
+          entry.target.classList.remove("ui-services__body__service__show");
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".ui-services__body__service");
+    hiddenElements.forEach((el) => observer.observe(el));
+    
+    // Clean up the memory before the component gets destroyed:
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   const widgetClassName = `ui-services ${primaryClassName}`;
 
   return (
