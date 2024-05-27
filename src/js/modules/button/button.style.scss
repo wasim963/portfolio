@@ -10,10 +10,7 @@
     border-radius: 6px;
     padding: 1rem 1.5rem;
     cursor: pointer;
-    
-    @include apply-theme { 
-        color: getThemeValue('text');
-    }
+    color: #e5e5e5;
 
     &__preIcon, &__postIcon {
         margin-right: 0.5rem;
@@ -21,7 +18,7 @@
 
         svg g {
             @include apply-theme {
-                fill: getThemeValue('text');
+                fill: #e5e5e5;
             }
         }
     }
