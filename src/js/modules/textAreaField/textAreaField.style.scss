@@ -33,16 +33,16 @@
         
         &__error {
             outline: none;
-            border: 1px solid red;
+            border: 1px solid $theme-primary-color;
 
             &:focus {
-                border: 1px solid red;
+                border: 1px solid $theme-primary-color;
             }
         }
     }
 
     &__error {
-        color: red;
+        color: $theme-primary-color;
         font-size: $theme-font-size-3;
     }
 }

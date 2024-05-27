@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Formik, Form } from 'formik';
 
 // local dependencies
@@ -16,14 +16,18 @@ export const ContactForm = ( props ) => {
     const [isSending, setIsSending] = useState(false);
     const [emailResponse, setEmailResponse] = useState(undefined);
 
+    const myRef = useRef();
+
     const handleFormSubmit = async (values, { setSubmitting }) => {
 
         setIsSending(true);
 
         const jsonPayload = JSON.stringify({
             ...values,
-            access_key: 'edf0d9e9-620f-4df8-9d01-0c059f9e30f9'
+            access_key: 'edf0d9e9-620f-4df8-9d01-0c059f9e30f1'
         })
+
+        setEmailResponse(undefined);
         
         try {
             const res = await fetch("https://api.web3forms.com/submit", {
@@ -35,12 +39,17 @@ export const ContactForm = ( props ) => {
                 body: jsonPayload
             })
             const response = await res.json();
-            setEmailResponse(response);
+            if (response.success) {
+                setEmailResponse({...response, type: 'success', icon: 'success'});
+            } else {
+                setEmailResponse({...response, type: 'error', icon: 'error'});
+            }
             setIsSending(false);
+            // myRef.current.scrollIntoView();
         } catch (error) {
-            setEmailResponse(error)
-            console.log(error, 'error');
+            setEmailResponse({...error, message: 'Something went wrong, Please try again!', type: 'error', icon: 'error'});
             setIsSending(false);
+            // myRef.current.scrollIntoView();
         }
     }
 
@@ -56,7 +65,12 @@ export const ContactForm = ( props ) => {
             <div className="ui-contact-form__body">
                 {
                     emailResponse && 
-                    <AlertMessage message={emailResponse.message} icon={emailResponse.success} />
+                    <AlertMessage
+                        ref={myRef}
+                        message={emailResponse.message}
+                        icon={emailResponse.icon}
+                        type={emailResponse.type}
+                    />
                 }
                 <Formik
                     initialValues={formFields.reduce((acc, field) => {
@@ -122,8 +136,13 @@ ContactForm.defaultProps = {
             },
             {
                 name: 'max',
-                value: 20,
+                value: 30,
                 message: 'Name must be 20 characters or less'
+            },
+            {
+                name: 'min',
+                value: 3,
+                message: 'Name must be 3 characters or more'
             }
         ]
     },
@@ -154,6 +173,10 @@ ContactForm.defaultProps = {
                 name: 'max',
                 value: 250,
                 message: 'Message must be 250 characters or less'
+            },
+            {
+                name: 'required',
+                message: 'Please write something...'
             }
         ]
     }

@@ -23,6 +23,7 @@
 
         &__item {
             font-size: $theme-font-size-7;
+            transition: transform 0.4s ease-out;
 
             &__icon {
                 display: flex;
@@ -44,11 +45,19 @@
                 }
                 
                 &__right {
-                    h3 {
-                        font-size: $theme-font-size-14;
+                    h4 {
+                        font-size: $theme-font-size-12;
                         line-height: 1rem;
                     }
                 }
+            }
+
+            &--dark {
+                transform: rotate(45deg);
+            }
+
+            &--light {
+                transform: rotate(-90deg);
             }
         }
 

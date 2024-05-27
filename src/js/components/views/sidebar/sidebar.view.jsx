@@ -28,16 +28,16 @@ export const sidebar = (props) => {
               <span>Living The Code</span>
             </div>
             <div className="ui-sidebar__menu__item__icon__right">
-              <h3>
+              <h4>
                 {"<"}
                 <span>{"/"}</span>
                 {">"}
-              </h3>
+              </h4>
             </div>
           </NavLink>
         </div>
         <span
-          className='ui-sidebar__menu__item'
+          className={`ui-sidebar__menu__item ui-sidebar__menu__item--${theme}`}
           onClick={toggleTheme}
         >
           <Icon

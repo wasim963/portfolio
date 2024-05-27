@@ -17,11 +17,11 @@ export const header = ( props ) => {
               <span>Living The Code</span>
             </div>
             <div className="ui-header__container__logo__icon__right">
-              <h1>
+              <h4>
                 {"<"}
                 <span>{"/"}</span>
                 {">"}
-              </h1>
+              </h4>
             </div>
           </NavLink>
         </div>
