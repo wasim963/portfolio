@@ -19,6 +19,7 @@
 
     &__input {
         padding: 11px;
+        outline: none;
         @include apply-theme {
             background-color: getThemeValue('bg');
             color: getThemeValue('text');
