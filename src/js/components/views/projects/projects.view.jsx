@@ -75,7 +75,7 @@ ProjectsView.defaultProps = {
         icon: 'github'
       },
       stack: [
-        'React', 'Node', 'Express.JS', 'Redux.JS', 'SCSS', 'MongoDB', 'JWT'
+        'React', 'Node', 'Express.Js', 'Redux.Js', 'SCSS', 'MongoDB', 'JWT'
       ],
       url: 'https://github.com/wasim963/blog-app'
     },
@@ -88,7 +88,7 @@ ProjectsView.defaultProps = {
         icon: 'github'
       },
       stack: [
-        'Next.JS', 'Redux.JS', 'MongoDB', 'SCSS', '@paypal'
+        'Next.Js', 'Redux.Js', 'MongoDB', 'SCSS', '@paypal'
       ],
       url: 'https://github.com/wasim963/restaurant'
     }

@@ -51,14 +51,16 @@ $bg-image: url('../../../../assets/web-design.jpg');
         cursor: pointer;
     }
 
+    .ui-card-footer {
+        order: 3;
+    }
+
     &__skills {
-        position: absolute;
-        bottom: 3rem;
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        gap: 0.5rem;
-        font-size: $theme-font-size-4;
+        gap: 1rem;
+        font-size: $theme-font-size-3;
 
         &__skill {
             border: 1px solid;

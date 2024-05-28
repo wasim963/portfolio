@@ -13,11 +13,28 @@ export function ProjectView( props ) {
 
   const widgetClassName = `ui-project ${primaryClassName}`;
 
+  const renderCardFooter = () => {
+    return (
+      <ul className="ui-project__skills">
+        {
+          stack.map(skill => {
+            return (
+              <li key={skill} className="ui-project__skills__skill">
+                { skill }
+              </li>
+            )
+          } )
+        }
+      </ul>
+    )
+  }
+
   return (
     <Card 
       primaryClassName={widgetClassName} 
       title={title}
       description={description}
+      renderCardFooter={renderCardFooter}
     >
       <div className="ui-project__body">
         {
@@ -33,17 +50,6 @@ export function ProjectView( props ) {
           height={36}
         />
       </a>
-      <div className="ui-project__skills">
-        {
-          stack.map(skill => {
-            return (
-              <div className="ui-project__skills__skill">
-                { skill }
-              </div>
-            )
-          } )
-        }
-      </div>
       <div className="ui-project__gradient ui-project__gradient--top"></div>
       <div className="ui-project__gradient ui-project__gradient--right"></div>
       <div className="ui-project__gradient ui-project__gradient--bottom"></div>

@@ -77,7 +77,10 @@
         top: $header-height-mobile;
         overflow: hidden;
         transition: height 0.3s ease-out;
-        background-color: $theme-primary-color;
+        @include apply-theme {
+            background-color: getThemeValue('text');
+        }
+        border-radius: 0 0 1rem 1rem;
 
         &__item {
             height: 5rem;
@@ -88,13 +91,13 @@
             
             a {
                 @include apply-theme {
-                    color: getThemeValue('text');
+                    color: getThemeValue('bg');
                 }
             }
 
             &--active {
                 @include apply-theme {
-                    color: getThemeValue('bg') !important;
+                    color: $theme-primary-color !important;
                     font-weight: 600;
                 }
             }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Card = ( { tagName, title, description, children, renderActionView, primaryClassName } ) => {
+export const Card = ( { tagName, title, description, children, renderActionView, primaryClassName, renderCardFooter } ) => {
   const widgetClassName = `ui-card ${primaryClassName}`
 
   const TagName = tagName ? tagName : 'div'
@@ -30,7 +30,15 @@ export const Card = ( { tagName, title, description, children, renderActionView,
                 }
             </div> : null
         }
-        { children }
+        {children}
+        {
+            renderCardFooter &&
+            <div className="ui-card-footer">
+            {        
+                renderCardFooter()
+            }
+            </div>
+        }
     </TagName>
   )
 }
