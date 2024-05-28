@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 const withBrowserRouter = (Component, props = {}) => {
   const WithRouter = () => {
     return (
-      <BrowserRouter>
+      <HashRouter>
        <React.StrictMode>
           <Component {...props} />
        </React.StrictMode>
-      </BrowserRouter>
+      </HashRouter>
     );
   };
 
