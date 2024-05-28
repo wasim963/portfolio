@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[721],{1721:(e,p,o)=>{e.exports=o.p+"0562e1fbc22d9ef10b82.webp"}}]);
