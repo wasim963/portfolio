@@ -138,14 +138,14 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin( {
             title: 'Portfolio',
-            template: path.join( __dirname, 'src', 'index.html' )
+            template: path.join(__dirname, 'src', 'index.html'),
+            favicon: './src/assets/favicon.png'
         } ),
 
         new MiniCSSExtractPlugin( {
             filename: 'css/styles.css'
         }),
         
-
         new webpack.DefinePlugin( {
             // provide SCSS global variables in JavaScript
             THEME: JSON.stringify( sassThemePairs.reduce((acc, current) => {
