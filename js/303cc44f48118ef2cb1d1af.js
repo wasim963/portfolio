@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[303],{5303:(e,s,o)=>{o.r(s),o.d(s,{default:()=>p});const p=o.p+"resume_wasim.pdf"}}]);
+//# sourceMappingURL=303cc44f48118ef2cb1d1af.js.map

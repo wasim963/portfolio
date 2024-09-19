@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[568],{5568:(e,o,p)=>{p.r(o),p.d(o,{default:()=>s});const s=p.p+"Res_01May24.pdf"}}]);
-//# sourceMappingURL=568046da593de2354088ee7.js.map
