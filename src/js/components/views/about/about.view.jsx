@@ -13,13 +13,18 @@ export function AboutView( props ) {
   const { title, description, primaryClassName } = props;
   const widgetClassName = `ui-about ${primaryClassName}`;
 
-  const { loading, error, image } = useImage('Res_01May24.pdf');
+  const { loading, error, image } = useImage('resume_wasim.pdf');
 
   const handleDownloadResume = () => {
     // anchor link
     const element = document.createElement("a");
     element.href = image;
-    element.download = "Wasim-resume-" + Date.now() + ".pdf";
+
+    // download directly instead of opening in a new tab
+    // element.download = "Wasim-resume-" + Date.now() + ".pdf";
+
+    // open downloaded file in a new tab
+    element.target = "__blank";
 
     // simulate link click
     document.body.appendChild(element); // Required for this to work in FireFox

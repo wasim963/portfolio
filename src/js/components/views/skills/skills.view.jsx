@@ -60,5 +60,5 @@ SkillsView.defaultProps = {
   title: "Skills",
   description: "My bucket of expertise",
   primaryClassName: '',
-  skills: [ 'react', 'next', 'javascript', 'html', 'css', 'scss', 'webpack', 'node', 'typescript', 'git', 'npm' ]
+  skills: [ 'react', 'next', 'javascript', 'html', 'css', 'scss', 'webpack', 'node', 'typescript', 'git', 'npm', 'jest', 'graphql', 'antd' ]
 };
