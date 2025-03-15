@@ -37,10 +37,10 @@ socialMedia.defaultProps = {
         path: "https://www.linkedin.com/in/wasim-linked-in"
     },
     {
-        name: "twitter",
-        title: "Twitter",
+        name: "x",
+        title: "X",
         type: "link",
-        path: ""
+        path: "https://x.com/wasim_id_"
     },
     {
         name: "instagram",

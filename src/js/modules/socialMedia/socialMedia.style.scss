@@ -1,23 +1,29 @@
 // import global variables
-@import '~scss-globals';
+@import "~scss-globals";
 
 .ui-social-media {
-    box-sizing: border-box;
-    width: 300px;
-    font-size: $theme-font-size-4;
-    word-break: keep-all;
+  box-sizing: border-box;
+  width: 300px;
+  font-size: $theme-font-size-4;
+  word-break: keep-all;
 
-    &__links {
-        display: flex;
-        gap: 2.5rem;
+  &__links {
+    display: flex;
+    gap: 2.5rem;
 
-        &--link {
-            cursor: pointer;
-            transition: all 1s ease;
+    &--link {
+      cursor: pointer;
+      transition: all 1s ease;
 
-            &:hover {
-                transform: scale(1.15);
-            }
+      &:hover {
+        transform: scale(1.15);
+      }
+
+      svg {
+        @include apply-theme {
+          fill: getThemeValue("text");
         }
+      }
     }
+  }
 }
