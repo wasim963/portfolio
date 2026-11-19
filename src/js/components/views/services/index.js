@@ -1,5 +1,5 @@
 // import styles
-import './services.style';
+import './services.style.scss';
 
 // export everything from view
 export * from './services.view';

@@ -7,8 +7,8 @@ const VIEWS = {
   'contactForm': ContactForm
 }
 
-export const contactPage = (props) => {
-  const { widgets } = props;
+export const contactPage = (props = {}) => {
+  const { widgets = contactPage.defaultProps.widgets } = props;
 
   return (
     <div className="ui-contact-page">

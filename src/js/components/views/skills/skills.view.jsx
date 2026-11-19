@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext } from "react";
 
 // local dependencies
@@ -5,14 +7,19 @@ import {
   isMobile,
   isTablet,
 } from "@utils/responsiveViewportHook/responsiveViewportHook.util";
-import { THEME_CONTEXT } from "@utils/themeProviderHook";
+import { THEME_CONTEXT, THEME_COLORS } from "@utils/themeProviderHook";
 
 // local views to render
 import { Card } from "@modules/card";
 import { Icon } from "@modules/icon-bank";
 
 export const SkillsView = (props) => {
-  const { title, description, primaryClassName, skills } = props;
+  const {
+    title = SkillsView.defaultProps.title,
+    description = SkillsView.defaultProps.description,
+    primaryClassName = '',
+    skills = SkillsView.defaultProps.skills,
+  } = props;
   const { theme } = useContext(THEME_CONTEXT);
 
   // main class name
@@ -39,7 +46,7 @@ export const SkillsView = (props) => {
                   name={skill}
                   width={iconWidth}
                   height={iconHeight}
-                  fill={theme === "dark" ? THEME.light : THEME.dark}
+                  fill={theme === "dark" ? THEME_COLORS.light : THEME_COLORS.dark}
                 />
               </span>
             );

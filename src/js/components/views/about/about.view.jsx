@@ -1,34 +1,23 @@
+'use client';
+
 import React from "react";
-import photo from '../../../../assets/passportpic.jpg';
 
 // local views to render
 import { Card } from "@modules/card";
 import { socialMedia as SocialMediaView  } from "@modules/socialMedia";
 import { button as Button } from "@modules/button";
-
-// local dependencies
-import useImage from "@hooks/useImage";
+import { assetPath } from "@utils/assetPath";
 
 export function AboutView( props ) {
-  const { title, description, primaryClassName } = props;
+  const {
+    title = AboutView.defaultProps.title,
+    description = AboutView.defaultProps.description,
+    primaryClassName = '',
+  } = props;
   const widgetClassName = `ui-about ${primaryClassName}`;
 
-  const { loading, error, image } = useImage('resume_wasim.pdf');
-
   const handleDownloadResume = () => {
-    // anchor link
-    const element = document.createElement("a");
-    element.href = image;
-
-    // download directly instead of opening in a new tab
-    // element.download = "Wasim-resume-" + Date.now() + ".pdf";
-
-    // open downloaded file in a new tab
-    element.target = "__blank";
-
-    // simulate link click
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
+    window.open(assetPath('resume_wasim.pdf'), '_blank', 'noopener,noreferrer');
   }
 
   return (
@@ -40,7 +29,7 @@ export function AboutView( props ) {
           <div className="ui-about__body__left__wrapper">
             <img
               className="ui-about__body__left__wrapper__image"
-              src={photo}
+              src={assetPath('passportpic.jpg')}
               alt="image"
             />
           </div>

@@ -4,7 +4,10 @@ import React from "react";
 import { Icon } from "@modules/icon-bank";
 
 export const socialMedia = ( props ) => {
-  const {navigations, primaryClassName} = props;
+  const {
+    navigations = socialMedia.defaultProps.navigations,
+    primaryClassName = '',
+  } = props;
   const className = `ui-social-media ${primaryClassName}`;
 
   return (

@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 
 // local views to render
@@ -5,7 +7,12 @@ import { ProjectView } from "@views/project";
 import { Card } from "@modules/card";
 
 export function ProjectsView( props ) {
-  const { title, description, projects, primaryClassName } = props;
+  const {
+    title = ProjectsView.defaultProps.title,
+    description = ProjectsView.defaultProps.description,
+    projects = ProjectsView.defaultProps.projects,
+    primaryClassName = '',
+  } = props;
 
     React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

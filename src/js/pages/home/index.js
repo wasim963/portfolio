@@ -1,5 +1,5 @@
 // import styles
-import './home.page.style';
+import './home.page.style.scss';
 
 // export everything from page
 export * from './home.page';

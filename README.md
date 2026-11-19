@@ -1,30 +1,24 @@
 # Portfolio
-My Portfolio
 
-### Steps to deploy React Repo On Github Pages
+This project uses Next.js with static export and React 18.
 
-# Create the GitHub repository
-# Adding the GitHub Pages dependency packages
-  $ npm install gh-pages --save-dev
+## Development
 
-# Adding the properties to the package.json file
-  "homepage": "https://<Username>.github.io/<Repository-name>"
-  "scripts":{
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build" 
-  }
+```sh
+npm install
+npm run dev
+```
 
-# Pushing the code updates to the GitHub repository and finally deploying the application  
-  $ git add .
-  $ git commit -m "commit message"
-  $ git push
-  $ npm run deploy
+The local development server uses the `/portfolio` base path to match the
+GitHub Pages deployment.
 
-# View the deployed app on GitHub
+## Build and deploy
 
-# Note : Tips for Managing Your Deployment
-1. Automatic Deployment: Set up a GitHub Actions workflow to automate the deployment process every time you push changes to the main branch.
-2. Custom Domain: Use a custom domain by adding a CNAME file to the public folder with your custom domain name.
-3. Branch Management: Ensure that the gh-pages branch is protected or managed properly to prevent unintended deletions or modifications.
+```sh
+npm run build
+npm run deploy
+```
 
-# https://www.geeksforgeeks.org/deployment-of-react-application-using-github-pages/
+Next.js writes the static site to `out/`; the deploy script publishes that
+directory to GitHub Pages. The exported site is configured for
+`https://wasim963.github.io/portfolio`.

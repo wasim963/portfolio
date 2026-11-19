@@ -1,26 +1,24 @@
+@use 'sass:map';
+@use '../../themes/main/default.theme' as theme;
+
 $theme-map: null;
 
-@mixin apply-theme { 
+@function getThemeValue($key) {
+  @return map.get($theme-map, $key);
+}
 
-  @each $theme, $map in $themes {
+@mixin apply-theme {
+  @each $theme-name, $theme-values in theme.$themes {
 
-    .theme--#{$theme} & { 
+    .theme--#{$theme-name} & {
       $theme-map: () !global;
 
-      @each $key, $submap in $map { 
+      @each $key, $value in $theme-values {
+        $theme-map: map.merge($theme-map, ($key: $value)) !global;
+      }
 
-        $value: map-get($map, $key); 
-
-        $theme-map: map-merge( 
-           $theme-map, 
-            ( 
-              $key: $value, 
-            ) 
-          ) !global; 
-      } 
-
-      @content; 
-      $theme-map: null !global; 
+      @content;
+      $theme-map: null !global;
     }
   }
 }

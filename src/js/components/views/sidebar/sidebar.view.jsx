@@ -1,11 +1,13 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // local dependencies
 import { Icon } from "@modules/icon-bank";
 
 export const sidebar = (props) => {
   const { navigations, isMenuOpen, handleClick, theme, toggleTheme } = props;
+  const pathname = usePathname();
 
   const listClassName = `ui-sidebar__list ${isMenuOpen ? 'ui-sidebar__list--open' : 'ui-sidebar__list--close'} `;
   return (
@@ -22,7 +24,7 @@ export const sidebar = (props) => {
           />
         </span>
         <div className='ui-sidebar__menu__item'>
-          <NavLink className="ui-sidebar__menu__item__icon" to={'/'} >
+          <Link className="ui-sidebar__menu__item__icon" href={'/'} >
             <div className="ui-sidebar__menu__item__icon__left">
               <h4>Wasim</h4>
               <span>Living The Code</span>
@@ -34,7 +36,7 @@ export const sidebar = (props) => {
                 {">"}
               </h4>
             </div>
-          </NavLink>
+          </Link>
         </div>
         <span
           className={`ui-sidebar__menu__item ui-sidebar__menu__item--${theme}`}
@@ -52,13 +54,13 @@ export const sidebar = (props) => {
           navigations.map((navigation => {
             return (
               <li key={navigation?.name} className="ui-sidebar__list__item">
-                <NavLink
-                  to={navigation?.path}
-                  className={({ isActive }) => 
-                    isActive ? 'ui-sidebar__list__item--active': ''
-                  }
+                <Link
+                  href={navigation?.path}
+                  className={pathname === navigation?.path
+                    ? 'ui-sidebar__list__item--active'
+                    : ''}
                 >{navigation.title?.toUpperCase()}
-                </NavLink>
+                </Link>
               </li>
             )
           } ) )

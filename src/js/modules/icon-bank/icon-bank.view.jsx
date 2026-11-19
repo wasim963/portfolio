@@ -1,8 +1,9 @@
+import { useId } from 'react';
 import HTMLReactParser from 'html-react-parser';
-import shortid from 'shortid';
 
 
 export const iconView = ( props ) => {
+    const generatedId = useId();
 
     // Extract name from props and store in 'name'.
     const name = props.name || props.id;
@@ -35,7 +36,7 @@ export const iconView = ( props ) => {
     const transform = `rotate(${rotate})`;
 
     // Generating unique id from name and create corresponding mask with the generated Id.
-    const id = `${ name }_${ shortid.generate() }`;
+const id = `${ name }_${ generatedId.replace(/:/g, '') }`;
 
     const mask = `url(#${ id })`;
 

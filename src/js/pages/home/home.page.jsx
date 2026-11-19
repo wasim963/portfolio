@@ -17,8 +17,8 @@ const VIEWS = {
   'projects': ProjectsView
 }
 
-export const homePage = ( props ) => {
-  const { widgets } = props;
+export const homePage = ( props = {} ) => {
+  const { widgets = homePage.defaultProps.widgets } = props;
 
   return (
     <div className="ui-home-page">

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useRef } from 'react';
 import { Formik, Form } from 'formik';
 
@@ -11,7 +13,13 @@ import { button as Button } from "@modules/button";
 import { AlertMessage } from "@modules/alertMessage";
 
 export const ContactForm = ( props ) => {
-    const { title, description, primaryClassName, formFields = [], formActions = [] } = props;
+    const {
+        title = ContactForm.defaultProps.title,
+        description = ContactForm.defaultProps.description,
+        primaryClassName = '',
+        formFields = ContactForm.defaultProps.formFields,
+        formActions = ContactForm.defaultProps.formActions,
+    } = props;
 
     const [isSending, setIsSending] = useState(false);
     const [emailResponse, setEmailResponse] = useState(undefined);

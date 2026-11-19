@@ -5,7 +5,12 @@ import { Card } from "@modules/card";
 import { experienceView as ExperienceView } from '@views/experience';
 
 export const educationTimeline = ( props ) => {
-  const { title, description, primaryClassName, experiences } = props;
+  const {
+    title = educationTimeline.defaultProps.title,
+    description = educationTimeline.defaultProps.description,
+    primaryClassName = '',
+    experiences = educationTimeline.defaultProps.experiences,
+  } = props;
 
   // main class name
   const widgetClassName = `ui-education-timeline ${primaryClassName}`;

@@ -1,7 +1,7 @@
 import React from "react";
 
 // local dependencies
-import useImage from '@hooks/useImage';
+import { assetPath } from "@utils/assetPath";
 
 // local views to render
 import { Card } from "@modules/card";
@@ -9,7 +9,6 @@ import { Icon } from "@modules/icon-bank";
 
 export function ProjectView( props ) {
   const { title, description, primaryClassName, config, stack=[], url } = props;
-  const { loading, error, image } = useImage(config?.image)
 
   const widgetClassName = `ui-project ${primaryClassName}`;
 
@@ -37,11 +36,7 @@ export function ProjectView( props ) {
       renderCardFooter={renderCardFooter}
     >
       <div className="ui-project__body">
-        {
-          loading ?
-            <p>Loading...</p> :
-            (error ? <p>config?.image</p> : <img src={image} alt={config?.image} />)
-        }
+        <img src={assetPath(config?.image)} alt={config?.image} />
       </div>
       <a className="ui-project__repo-link" href={`${url}`} target="_blank" >
         <Icon

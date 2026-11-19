@@ -1,2 +1,21 @@
-// import base css
-@import './base';
+@use './base/index';
+@use './globals/index' as *;
+
+.ui-index {
+    box-sizing: border-box;
+    min-height: $height-min-content;
+    @include apply-theme {
+        background-color: getThemeValue('bg');
+        color: getThemeValue('text');
+    }
+}
+
+.ui-app-view {
+    box-sizing: border-box;
+    max-width: 100vw;
+    min-height: $height-min-content;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}

@@ -1,5 +1,5 @@
 // import global variables
-@import '~scss-globals';
+@use 'globals/index' as *;
 
 .ui-button {
     box-sizing: border-box;

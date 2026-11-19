@@ -1,5 +1,5 @@
 // import style
-import './contact-form.style'
+import './contact-form.style.scss';
 
 // export everything from view
 export * from './contact-form.view';

@@ -18,8 +18,8 @@ const VIEWS = {
 }
 
 
-export const experiencePage = ( props ) => {
-  const { widgets } = props;
+export const experiencePage = ( props = {} ) => {
+  const { widgets = experiencePage.defaultProps.widgets } = props;
 
   return (
     <div className='ui-experience-page'>

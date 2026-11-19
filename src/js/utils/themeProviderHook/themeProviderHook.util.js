@@ -1,4 +1,11 @@
+'use client';
+
 import React, { createContext, useState } from "react";
+
+export const THEME_COLORS = {
+    dark: '#0d1117',
+    light: '#e5e5e5'
+};
 
 const initialThemeState = {
     theme: `dark`

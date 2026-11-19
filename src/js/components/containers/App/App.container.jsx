@@ -1,20 +1,26 @@
-import React, { Fragment } from 'react';
-import { withBrowserRouter } from '@hoc/withBrowserRouter';
-import { IndexPage } from '@containers/indexPage';
+'use client';
+
+import React from 'react';
+import { Header } from '@containers/Header';
+import { footer as Footer } from '@views/footer';
 import { responsiveViewportHook as ResponsiveViewportHook } from '@utils/responsiveViewportHook';
 import { ThemeProvider } from '@utils/themeProviderHook';
+import { primaryNavigations } from '@data/header';
+import { footerNavigations } from '@data/footer';
 
-export const App = () => {
-  const AppView = withBrowserRouter( IndexPage );
-  
+export const App = ({ children }) => {
   return (
-    <Fragment> 
+    <>
       <ResponsiveViewportHook>
         <ThemeProvider>
-          <AppView />
+          <Header navigations={primaryNavigations} />
+          <div className="ui-app-view">
+            <div className="ui-index">{children}</div>
+          </div>
+          <Footer navigations={footerNavigations} />
         </ThemeProvider>
       </ResponsiveViewportHook>
-    </Fragment>
+    </>
   )
 }
 

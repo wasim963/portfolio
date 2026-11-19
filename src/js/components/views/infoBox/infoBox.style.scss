@@ -1,5 +1,5 @@
 // import global variables
-@import '~scss-globals';
+@use 'globals/index' as *;
 
 .ui-info-box {
     box-sizing: border-box;
@@ -98,7 +98,7 @@
         margin: 0 auto;
         @include apply-theme {
             background-color: getThemeValue('bg');
-            background-image: linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
+            background-image: linear-gradient(to right, getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
             background-image: -o-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
             background-image: -moz-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);
             background-image: -webkit-linear-gradient(left , getThemeValue('bg') 1%, getThemeValue('text') 50%, getThemeValue('bg') 99%);

@@ -1,7 +1,6 @@
 import React from 'react';
 
-// local dependencies
-import useImage from '@hooks/useImage';
+import { assetPath } from '@utils/assetPath';
 
 // local views to render
 // import { Icon } from '@modules/icon-bank';
@@ -9,8 +8,6 @@ import useImage from '@hooks/useImage';
 
 export const infoBox = ( props ) => {
     const widgetClassName = `ui-info-box ${props?.primaryClassName}`;
-
-    const { loading, error, image } = useImage(props?.icon)
 
     return (
         <div className={widgetClassName} >
@@ -20,7 +17,7 @@ export const infoBox = ( props ) => {
             </div>
             <div className="ui-info-box__body">
                 <div className="ui-info-box__body__icon">
-                    <img src={ image } alt={props.icon} />
+                    <img src={assetPath(props.icon)} alt={props.icon} />
                 </div>
                 <div className="ui-info-box__body__details">
                     <h3>{props?.designation}</h3>
