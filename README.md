@@ -20,5 +20,6 @@ npm run deploy
 ```
 
 Next.js writes the static site to `out/`; the deploy script publishes that
-directory to GitHub Pages. The exported site is configured for
+directory to GitHub Pages and disables Jekyll processing so `_next` assets are
+published. The exported site is configured for
 `https://wasim963.github.io/portfolio`.
