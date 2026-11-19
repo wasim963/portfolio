@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:I[2106,["405","static/chunks/405-9e2f926f9c87e7e4.js","176","static/chunks/176-c4a8215ca4d82670.js","46","static/chunks/46-2f05a2704b651b2b.js","177","static/chunks/app/layout-a40872cc7b00a2f9.js"],"App"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4500,["405","static/chunks/405-9e2f926f9c87e7e4.js","46","static/chunks/46-2f05a2704b651b2b.js","974","static/chunks/app/page-9226d180c235f252.js"],"AboutView"]
+6:I[2884,["405","static/chunks/405-9e2f926f9c87e7e4.js","46","static/chunks/46-2f05a2704b651b2b.js","974","static/chunks/app/page-9226d180c235f252.js"],"ServicesView"]
+7:I[1204,["405","static/chunks/405-9e2f926f9c87e7e4.js","46","static/chunks/46-2f05a2704b651b2b.js","974","static/chunks/app/page-9226d180c235f252.js"],"ProjectsView"]
+8:I[4431,[],"OutletBoundary"]
+a:I[5278,[],"AsyncMetadataOutlet"]
+c:I[4431,[],"ViewportBoundary"]
+e:I[4431,[],"MetadataBoundary"]
+f:"$Sreact.suspense"
+11:I[7150,[],""]
+:HL["/portfolio/_next/static/css/6c1552a0d92bf565.css","style"]
+:HL["/portfolio/_next/static/css/78584d24c6f50da7.css","style"]
+:HL["/portfolio/_next/static/css/ad54086a635a3ff4.css","style"]
+:HL["/portfolio/_next/static/css/3662aea04de48443.css","style"]
+:HL["/portfolio/_next/static/css/e5d2531566373bab.css","style"]
+:HL["/portfolio/_next/static/css/5815c1a98f499d9b.css","style"]
+:HL["/portfolio/_next/static/css/b16e4b0292478345.css","style"]
+0:{"P":null,"b":"3UcPiKIpKQeQ8R6KvizpR","p":"/portfolio","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/css/6c1552a0d92bf565.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/portfolio/_next/static/css/78584d24c6f50da7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/portfolio/_next/static/css/ad54086a635a3ff4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"ui-not-found-page","children":"Not Found Page"}],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/css/686a29dec8e84221.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"ui-home-page","children":[["$","$L5","about",{"primaryClassName":"ui-home-page__widget ui-home-page__widget__about"}],"$undefined",["$","$L6","services",{"primaryClassName":"ui-home-page__widget ui-home-page__widget__services"}],["$","$L7","projects",{"primaryClassName":"ui-home-page__widget ui-home-page__widget__projects"}]]}],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/css/3662aea04de48443.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/portfolio/_next/static/css/e5d2531566373bab.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/portfolio/_next/static/css/5815c1a98f499d9b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/portfolio/_next/static/css/b16e4b0292478345.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L8",null,{"children":["$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lc",null,{"children":"$Ld"}],null],["$","$Le",null,{"children":["$","div",null,{"hidden":true,"children":["$","$f",null,{"fallback":null,"children":"$L10"}]}]}]]}],false]],"m":"$undefined","G":["$11",[]],"s":false,"S":true}
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+9:null
+12:I[622,[],"IconMark"]
+b:{"metadata":[["$","title","0",{"children":"Wasim Akram | Portfolio"}],["$","meta","1",{"name":"description","content":"Portfolio of Wasim Akram, Frontend Engineer."}],["$","link","2",{"rel":"icon","href":"/portfolio/favicon.png"}],["$","$L12","3",{}]],"error":null,"digest":"$undefined"}
+10:"$b:metadata"
